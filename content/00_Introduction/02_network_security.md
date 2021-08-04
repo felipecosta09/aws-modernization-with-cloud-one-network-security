@@ -29,8 +29,6 @@ You’ll be provided with deployment templates, pre-configured filters, and secu
 - Deploy inline within existing architecture
 - Inspect ingress and egress traffic with single deployment
 
-, or beside the Microsoft®Azure® Firewall. Our cloud network security experts will be happy to work with you to identify the best deployment options within your existing environment.
-
 
 ### Learn More
 
