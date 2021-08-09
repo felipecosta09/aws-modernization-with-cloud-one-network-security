@@ -35,6 +35,8 @@ This is the deployment that we will be using in our workshop :blush:
 </p>
 {{% /notice %}}
 
+---
+
 #### Option 2 - Centralized Network Appliance with Gateway Load Balancer for Inbound Traffic
 
 This deployment is designed to protect servers that primarily receive connections from the internet.
@@ -55,6 +57,8 @@ Refer to the image below for details on the environment structure and routing fo
 Dynamic auto-scaling and Inspection Bypass mode are not yet supported for Gateway Load Balancer in Network Security.
 </p>
 {{% /notice %}}
+
+---
 
 #### Option 3 - Centralized Network Appliance with Gateway Load Balancer for Outbound or Lateral Traffic:
 

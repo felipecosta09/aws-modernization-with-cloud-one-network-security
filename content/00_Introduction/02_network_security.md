@@ -1,7 +1,7 @@
 ---
 title: "Cloud One Network Security"
 chapter: false
-weight: 20
+weight: 6
 ---
 
 ### Powerful Network Layer Security Designed for the Cloud
@@ -16,7 +16,7 @@ Whether you’re starting out on your cloud migration journey or looking for def
 
 - <b>Deploy simply, seamlessly, and transparently</b>: No disruption to your business, network, applications, or DevOps processes, and stay undetectable to hackers—without losing visibility. With multiple, flexible deployment scenarios, you don’t need to rearchitect to meet your security needs. No need to deploy additional load balancers or pairs of appliances. Network Security allows you to inspect ingress and egress traffic on a single instance where you need it.
 
-- <b>Partner confidently with your security provider</b>: Tren d M i cro™ Research has over 500 investigators worldwide, including successful programs like the Trend Micro™ Zero Day Initiative™, providing filters for Network Security customers, so you can protect, detect, and respond to threats faster and with greater knowledge.
+- <b>Partner confidently with your security provider</b>: Trend Micro™ Research has over 500 investigators worldwide, including successful programs like the Trend Micro™ Zero Day Initiative™, providing filters for Network Security customers, so you can protect, detect, and respond to threats faster and with greater knowledge.
 
 
 ### Multiple, Flexible Deployment Scenarios
@@ -29,7 +29,4 @@ You’ll be provided with deployment templates, pre-configured filters, and secu
 - Deploy inline within existing architecture
 - Inspect ingress and egress traffic with single deployment
 
-
-### Learn More
-
-To learn more about our hybrid cloud security capabilities or to take a full test drive, click <a href="https://www.trendmicro.com/cloudone">here</a>
+Let's check out with more details some posible network security architectures with **Cloud One - Network Security** :cloud: :laptop: :rocket:

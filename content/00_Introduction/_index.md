@@ -5,59 +5,66 @@ weight: 5
 pre: "<b>1. </b>"
 ---
 
-## Putting Security into The IaC Pipeline
-Infrastructure-as-Code or IaC is the new normal on creating and building any new cloud environment through machine-readable files or code templates. It is important, however, to consider security in regards to the infrastructure that you may be creating to ensure it is following the best practices and compliance from your organization.
+## SECURE THE CLOUD WITHOUT GIVING UP THE BENEFITS
+As more and more enterprises adopt multi- or hybrid cloud strategies, cloud architects and network security teams are struggling to protect
+business-critical assets across their many different cloud environments. They’re finding that what worked on-premises for security doesn’t
+necessarily translate to the cloud.
 
-### Why IaC is the New Normal?
-Physical hardware can require you to add in the rack and make the proper configuration before starting to use it, which sometimes could take weeks or months to be able to create a new server. Now with IaC, you can create a complete infrastructure for your application in the cloud in less than an hour. 
+### A challenge to deploy
 
-Before Infrastructure-as-Code, IT teams would have to add the server into the data center manually, install OS, and make the proper configs before they could use it. In some cases, they would use some automated scripts to help with some tasks, but it would not make it fully automated. 
+Many existing network security solutions are painful to deploy because they’re not designed for the cloud. Some require extensive downtime to
+be inserted inline, some have outdated throughput-based licensing models, and others may be impossible to deploy within an enterprise’s existing
+cloud infrastructure. For example, agent/host-based solutions aren’t always feasible or desirable with the cloud. Enterprises may not have the right
+to deploy an agent on their cloud provider’s virtual server—or may not want to dedicate compute to an agent at the expense of other workloads.
+There’s also the problem of complexity. An overwhelming number of appliances, load balancers, and other “moving parts” have to be installed and
+managed to inspect inbound and outbound traffic. If every virtual public cloud (VPC) needs its own firewall—and if an enterprise has hundreds of
+VPCs—the management burden and costs quickly add up.
 
-Years ago we needed to wait for one or two months to have the Infrastructure to start some projects. Today, they can create it in a couple of hours or minutes following all the compliance is required.
-With IaC, your Infrastructure takes the form of code templates. Since the code is a text file, it is easy for you to edit, copy, and share it with your team. It is recommended that you put it under source control as we do for any source code file using code repositories like GitHub, GitLab, Bitbucket, or AWS CodeCommit. Here are the three main benefits of using IaC:
+Changes often have to be made to the network infrastructure itself to accommodate those additional components, with some security solutions
+requiring IP addresses to be changed or specific topologies to be deployed. New devices inserted in the network can also become “critical” going
+forward, meaning they can’t be easily (or cheaply) removed or modified. And as more pieces get added, they bring inefficiencies that can disrupt or
+slow down network traffic, affecting core business operations and processes.
 
+There are cloud-native security solutions, of course, but these are often tied to specific platforms, such as Amazon Web Services (AWS). Having a different security solution for every cloud prevents enterprises from getting a centralized view of the threats they face.
+It also increases the risks of management dashboard/console overload, increasing the odds that important security alerts will be missed. These
+platform-specific cloud solutions also tend to lack key security features, such as virtual patching at the network layer, egress filtering, and deep
+packet inspection.
 
-![Benefits](/images/benefits.png)
+![Introducation](/images/intro.png)
 
-- <b>Speed</b> -> Enables you to quickly set up a new infrastructure by just using code or scripts.
+---
 
-- <b>Control</b> -> Since you can view IaC template files like any other source code file, you have full traceability through code repository of the changes that each template has suffered.
+## Network Policies to Help Reduce Risk and Improve Security
 
-- <b>Consistency</b> -> Any human is susceptible to making mistakes. IaC prevents mistakes by using config files, having a single source of truth, and ensuring the same configurations for the hole environment.
-
-Here is a good animation video explaning couple addtional information about IaC if you would like to take a look:
-[![Infrastructure as Code Explained](http://img.youtube.com/vi/z90UOAhyHeg/0.jpg)](http://www.youtube.com/watch?v=z90UOAhyHeg)
-
-
-### Three Ways to Add Security into Your Infrastructure as Code (IaC) Pipeline
-
-Now that we have more information on implementing security into the CI/CD pipeline, let’s continue by discussing how to add security checks for misconfigurations in your IaC.
-
-<i>According to Gartner, “Through 2023, at least 99% of cloud security failures will be the customer’s fault.”1 Gartner also states, “Through 2024, organizations implementing a CSPM offering and extending this into development will reduce cloud-related security incidents due to misconfiguration by 80%.” 1</i>
-
-This statistic is mainly associated with misconfigurations in the cloud infrastructure. It is so important to have visibility and a process for real-time feedback, as it gives developers more information about the IaC before they build. Without the proper information, a developer could unknowingly start to build in a new cloud environment with security flaws that could generate a lot of headaches for your company.
-
-![Diagram](/images/IaC_diagram.png)
-
-1. <b>Integrated Development Environment Security Plugin</b>
-This type of plugin is designed to get real-time feedback to developers on the IaC and application development. Developers can scan and fix issues in the development environment workspace without any additional security tools to detect issues—shifting security the farthest to the
-left possible.
-
-2. <b>Template Scanner</b>
-This scanner uses APIs directly within the security platform to integrate with custom tools or specific use cases in CI/CD pipelines. The scans provide real-time checks every time you push new code. The results can be shared with developers and cloud architects, providing them with the information they need to monitor any issues before going to production.
-
-3. <b>Cloud Security Posture Management (CSPM)</b>
-A security tool to detect misconfigurations in multiple cloud service providers. This technology can integrate with DevSecOps capabilities to help with auto-remediation capabilities in your cloud infrastructure. It can also help organizations gain a coherent picture of security and compliance risks across multi-cloud environments.
-
-Due to misconfigurations in the cloud infrastructure, it is essential to implement a way to ensure visibility and real-time feedback for developers of IaC before they build cloud environments containing security or compliance flaws that could potentially generate headaches for your company. That's why is so important to make sure you are creating new infrastructure in AWS following the best practices architectures based on the <b>AWS Well-Architect Framework</b>.
-
-Now let's start implementing the first step mentioned in the architecture above.  :man_technologist: :woman_technologist: :laptop: :cloud:
+>*Cloud workloads frequently require internet access, and as we know, anything accessing the internet can be breached. This article explores simple tactics such as access level restriction and overlaying threat intelligence to enhance your security posture.*
 
 
-1 Gartner, Inc.; Innovation Insight for Cloud Security Posture Management; 25 January 2019 | G00377795
+Most cloud practitioners start their network control journey looking at security groups, firewalls, or web application firewalls (WAF) to protect their public applications from inbound attacks.  But what about workloads that aren’t public facing but still have internet access?
 
-{{% notice warning %}}
-<p style='text-align: left;'>
-The examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various Trend Micro - Cloud One and AWS services can be architected to build a solution while demonstrating best practices along the way.
-</p>
-{{% /notice %}}
+For example, this Amazon Elastic Compute Cloud (EC2) Linux workload can be infiltrated by Kinsingpunk Malware to steal Amazon Web Services (AWS) credentials, Secure Shell (SSH) keys, and bash history file, among other types of credentials and information. Collected data is then sent to the remote server **sayhi.bplaced[.]net**
+
+Considering that malware uses techniques to rapidly change these domains, chasing malicious domains one at a time, is difficult, if not impossible, to react to.  In this attack, restricting internet traffic to only known, good domains would have prevented the exfiltration to **sayhi.bplaced[.]net**
+
+Reasons like this are in part why frameworks like PCI DSS (Section 1.2.1) make this proactive and powerful security control a requirement.
+
+With cloud providers introducing new networking technologies, it’s important to use a transparent, threat-focused security solution like Trend Micro Cloud One™ – Network Security. This solution can be implemented next to the internet gateway to achieve these goals.  With a multi-cloud approach, these benefits can be made available to any compute service in your VPC or VNet communicating via an internet gateway.
+
+<h4>Now… overlay threat context to supercharge your automation and response:</h4>
+
+Ok, so now that unsanctioned internet communications are prevented, what’s next to maximize security and minimize risk?
+
+Looking at what threats were blocked can determine the appropriate response.  Overlaying threat intelligence provides powerful context to differentiate between an application issue or a security issue.
+
+For instance, a workload reaching out to **example.com** may simply indicate the need for a policy change or be from incomplete code that inadvertently made it to production.  While this needs to be addressed, it likely doesn’t warrant immediate concern. Therefore, responding with automation to create an issue or to inform the app owner of this violation may be all that is needed.
+
+What about a blocked attempt to reach out to known command and control (C&C)?  Or communications attempt to an anonymous proxy or suspicious geo-region?  Or a network inspection that blocks a known malware check-in?  This response may be significantly different—like automation that terminates or quarantines the affected code, notifying your security operations center (SOC), and possibly initiating incident response activities.
+
+This security context provided from solutions like Network Security allow for a better response and now you can rest easy knowing that even approved internet-bound traffic to the specified known, good domains will be further analyzed for signs of malicious activity, exfiltration attempts, and other compromises.
+
+<h4>On Architecture:</h4>
+
+Implementing Network Security at your application’s internet gateway is a great way for DevOps teams to add protection.  For cloud architects, patterns that share security and network infrastructure can scale this compliance and security control.  This can then provide a security best practice guardrail that can be rapidly used across your organization by many teams.
+
+Common patterns include, sharing a centrally managed network control using AWS technologies like Gateway Load Balancer (GWLB) or architecting a hub-and-spoke network topology with a shared internet egress point—providing a great location to deploy a control for multiple teams.
+
+![Introducation](/images/intro_2.png)
