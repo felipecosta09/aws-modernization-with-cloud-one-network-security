@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "Securing your IaC pipeline and InfraStructure with Trend Micro - Cloud One"
+title = "SECURING YOUR APPLICATIONS WITH Trend Micro - Cloud One NETWORK SECURITY"
 theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= "true"
