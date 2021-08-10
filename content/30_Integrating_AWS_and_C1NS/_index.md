@@ -1,11 +1,11 @@
 ---
-title: "Deploy Cloud One Network Security"
+title: "Deploy Cloud One - Network Security"
 chapter: false
 weight: 50
 pre: "<b>4. </b>"
 ---
 
-### Create the Environment
+### Architecture Base for the Lab
 
 To simulate a real customer environment, we will use a pre-built Cloud Formation template that will create 2 subnets, NAT Gateway, Internet Gateway, and the EC2 instances, all in the same AZ.
 

@@ -49,7 +49,7 @@ Reasons like this are in part why frameworks like PCI DSS (Section 1.2.1) make t
 
 With cloud providers introducing new networking technologies, it’s important to use a transparent, threat-focused security solution like Trend Micro Cloud One™ – Network Security. This solution can be implemented next to the internet gateway to achieve these goals.  With a multi-cloud approach, these benefits can be made available to any compute service in your VPC or VNet communicating via an internet gateway.
 
-<h4>Now… overlay threat context to supercharge your automation and response:</h4>
+> <h4>Now… overlay threat context to supercharge your automation and response:</h4>
 
 Ok, so now that unsanctioned internet communications are prevented, what’s next to maximize security and minimize risk?
 
