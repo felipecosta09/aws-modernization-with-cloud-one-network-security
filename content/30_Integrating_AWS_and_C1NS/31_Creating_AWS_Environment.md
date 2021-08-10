@@ -43,3 +43,29 @@ You can use the CloudFormation template bellow to create the infrastructure in s
 - Click on "Choose the File" 
 - Select the CloudFormation template that you Download in the step (1) from this page 
 - Click on the button "Next"
+
+![C1NS1](/images/create_env_3.png) 
+
+---
+
+### 5. Specifying additional stack parameters
+
+    Stack Name: <Name of your stack>
+
+    InspectionVPCCIDR: <the CIDR that you want to use for the VPC> 
+    "You don't need to change it, if you don't to change the default configuration"
+    
+    KeyPair: <Your keypair Name>
+
+    MyPublicIP: <your public IP in CIDR> 
+    "e.g. 191.162.228.91/32 . You can grab it using a few tools or websites (https://ipinfo.io/ip). It will be use to only allow your IP to access the vulnerable application (DVWA)"
+
+    ProtectedPrivateSubnetAZ: <the AZ what you want to use to your Private subnet>
+
+    ProtectedPrivateSubnetCIDR: <the CIDR that you want to use for the Private> 
+    "You don't need to change it, if you don't want"
+
+    ProtectedPublicSubnetAZ: <the AZ what you want to use to your Public subnet>
+
+    ProtectedPublicSubnetCIDR: <the AZ what you want to use to your Public subnet> 
+    "You don't need to change it, if you don't want to"
