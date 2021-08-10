@@ -12,4 +12,4 @@ As part of this scenario, you will need the following items to be able to build 
 
 - AWS account -> [Register here if you don't have one](https://portal.aws.amazon.com/billing/signup#/start)
 
-**Let's start building your first Infrastructure-as-Code pipeline with Best-Practices Checks!**
+**Let's start building your first Network-Secured VPC**

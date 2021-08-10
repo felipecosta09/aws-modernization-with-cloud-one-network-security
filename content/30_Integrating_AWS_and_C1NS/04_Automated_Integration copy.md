@@ -1,28 +1,28 @@
 ---
-title: "Integrating AWS with Cloud One Network Security"
+title: "Integrating AWS with Cloud One Network Security - Automated"
 chapter: false
-weight: 80
-pre: "<b>4.3 </b>"
+weight: 70
+pre: "<b>4.2 </b>"
 ---
 
 ### Integrating AWS with Cloud One Network Security
 
-After you create a Cloud One account using this link here: [SingUp](https://cloudone.trendmicro.com/SignIn.screen#) on pre-requisites. Now we will be integrating your AWS account into Cloud One - Conformity to help you bring deep visibility around the possible drifts and misconfiguration over 80 different AWS Services mapping it with the most commom standard and framework in the market and with AWS Well-Architected Framework too :star_struck:
+After you create a Cloud One account using this link here: [Register](https://cloudone.trendmicro.com/register) on pre-requisites. Now we will be integrating your AWS account into Cloud One - Network Security to help you bring deep visibility around the possible drifts and misconfiguration over 80 different AWS Services mapping it with the most commom standard and framework in the market and with AWS Well-Architected Framework too :star_struck:
 
 
 #### Login in Cloud One and go to Network Security
 
-Upon signing into Cloud One, you’ll be prompted to select between the 6 services in Cloud One platform, select Conformity in the main page.
+Upon signing into Cloud One, you’ll be prompted to select between the 6 services in Cloud One platform, select Network Security in the main page.
 
-![Integration1](/images/integration1.png) 
+![C1NS1](/images/Login_C1.png) 
 
-![Integration2](/images/integration2_update.png) 
+![C1NS2](/images/C1NS_Service.png) 
 
-After it you will be able to begin adding your AWS account after you click in "Add Account". There are two ways to link your account: Automatically or Manually.
+After it you will be able to begin adding your AWS account after you click in "Start Wizard".
 
-![Integration3](/images/integration3.png) 
+![C1NS3](/images/C1NS_Wizard.png)
 
-![Integration4](/images/integration4.png) 
+![C1NS4](/images/Add_IAM_Policy.png) 
 
 ````
 {

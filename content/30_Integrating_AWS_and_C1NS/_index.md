@@ -1,102 +1,16 @@
 ---
-title: "Integrating AWS with Cloud One Network Security"
+title: "Deploy Cloud One Network Security"
 chapter: false
 weight: 50
 pre: "<b>4. </b>"
 ---
 
-### Integrating AWS with Cloud One Network Security
+### Create the Environment
 
-After you create a Cloud One account using this link here: [Register](https://cloudone.trendmicro.com/register) on pre-requisites. Now we will be integrating your AWS account into Cloud One - Network Security to help you bring deep visibility around the possible drifts and misconfiguration over 80 different AWS Services mapping it with the most commom standard and framework in the market and with AWS Well-Architected Framework too :star_struck:
+To simulate a real customer environment, we will use a pre-built Cloud Formation template that will create 2 subnets, NAT Gateway, Internet Gateway, and the EC2 instances, all in the same AZ.
 
+As a recommended deployment method in the C1NS documentation, we will use 2 subnets in this scenario. Bellow you can see the topology of the AWS environment before the C1NS deployment.
 
-#### Login in Cloud One and go to Network Security
+![Edge_Deployment](/images/C1NS_Edge_Deployment.png) 
 
-Upon signing into Cloud One, you’ll be prompted to select between the 6 services in Cloud One platform, select Network Security in the main page.
-
-![C1NS1](/images/Login_C1.png) 
-
-![C1NS2](/images/C1NS_Service.png) 
-
-After it you will be able to begin adding your AWS account after you click in "Start Wizard".
-
-![C1NS3](/images/C1NS_Wizard.png)
-
-
-
-
-![C1NS4](/images/Add_IAM_Policy.png) 
-
-````
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "cloudconnectorEc2",
-      "Effect": "Allow",
-      "Action": [
-        "ec2:DescribeImages",
-        "ec2:DescribeInternetGateways",
-        "ec2:DescribeInstances",
-        "ec2:DescribeNetworkInterfaces",
-        "ec2:DescribeAvailabilityZones",
-        "ec2:DescribeVpcs",
-        "ec2:DescribeRegions",
-        "ec2:DescribeNatGateways",
-        "ec2:DescribeSubnets",
-        "ec2:DescribeKeyPairs",
-        "ec2:DescribeRouteTables",
-        "ec2:DescribeSecurityGroups"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Sid": "cloudconnectorIamPolicy",
-      "Effect": "Allow",
-      "Action": [
-        "iam:GetPolicyVersion",
-        "iam:GetPolicy"
-      ],
-      "Resource": "arn:aws:iam::*:policy/NetworkSecurityPolicy"
-    },
-    {
-      "Sid": "cloudconnectorIamRole",
-      "Effect": "Allow",
-      "Action": [
-        "iam:GetRole",
-        "iam:ListAttachedRolePolicies"
-      ],
-      "Resource": "arn:aws:iam::*:role/NetworkSecurityRole"
-    }
-  ]
-}
-````
-
-![Integration5](/images/integration5.png) 
-
-To link your account, be it automatically or manually, a dedicated IAM role with two custom policies will be created in order to enable Cross Account Access. To verify the IAM role and the type of access necessary to use it, click Manual setup and review the attached custom policies.
-
-![Integration6](/images/integration6.png) 
-
-![Integration8](/images/integration8.png) 
-
-
-Follow the automation instructions regarding AWS setup. After selecting “Launch Stack”, you’ll be taken to your AWS Management Console and prompted to check “I acknowledge…” After a few moments, a CloudFormation Stack will be created. Upon creation, go to Outputs, copy the CloudConformityRoleArn and paste into the box on Cloud One - Conformity:
-
-![Integration7](/images/integration7.png) 
-
-![Integration9](/images/integration9.png) 
-
-![Integration10](/images/integration10.png) 
-
-After adding the ARN to Cloud One - Conformity click "Next". Now you have successfully added your AWS account :cloud: :smile:
-
-![Integration11](/images/integration11.png) 
-
-The Cloud One - Conformity bot will automatically kick off a scan upon completion. After the scan has completed, you have successfully set up your account.
-
-![Integration12](/images/integration12.png) 
-
-Now you are all set up and you will bee able to see the results after couple minutes in the dashboard like te image below:
-
-![Integration13](/images/integration13.png) 
+Note: In this example you don't need to create the Inspection and Management subnet because the CloudFormation template suggested by the C1NS will create for you these 2 subnets.
