@@ -9,7 +9,7 @@ Whether you’re starting out on your cloud migration journey or looking for def
 
 ![Diagram](/images/networksecurity.png)
 
-
+--- 
 ### Benefits
 
 - <b>Protect your cloud network and meet compliance requirements</b>: Secure entire VPCs at scale without the need to deploy an agent with active, actionable, security that is undetectable inline. Network Security includes a flow-based engine to meet your security and networking needs while supporting governance and compliance requirements. 
@@ -18,6 +18,7 @@ Whether you’re starting out on your cloud migration journey or looking for def
 
 - <b>Partner confidently with your security provider</b>: Trend Micro™ Research has over 500 investigators worldwide, including successful programs like the Trend Micro™ Zero Day Initiative™, providing filters for Network Security customers, so you can protect, detect, and respond to threats faster and with greater knowledge.
 
+---
 
 ### Multiple, Flexible Deployment Scenarios
 

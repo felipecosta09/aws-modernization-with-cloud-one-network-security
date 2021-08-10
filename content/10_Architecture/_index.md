@@ -5,7 +5,7 @@ weight: 30
 pre: "<b>2. </b>"
 ---
 
-### Deployment Options 
+## Deployment Options 
 
 Network Security is offered as an Amazon Machine Image (AMI). When you decide how to deploy Network Security in your network, we recommend that you choose one of the following deployment options.
 
@@ -13,7 +13,7 @@ Each deployment option is a reference architecture created for different common 
 
 The arrows in the images indicate the flow of network traffic through the VPCs and the Network Security instance.
 
-
+---
 
 #### Option 1 - Edge Protection Deployment
 
