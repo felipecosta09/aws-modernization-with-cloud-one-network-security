@@ -1,16 +1,16 @@
 ---
-title: "Integrating AWS with Cloud One - Conformity"
+title: "Integrating AWS with Cloud One Network Security"
 chapter: false
 weight: 60
-pre: "<b>5. </b>"
+pre: "<b>4.1 </b>"
 ---
 
-### Integrating AWS with Cloud One - Conformity
+### Integrating AWS with Cloud One Network Security
 
 After you create a Cloud One account using this link here: [SingUp](https://cloudone.trendmicro.com/SignIn.screen#) on pre-requisites. Now we will be integrating your AWS account into Cloud One - Conformity to help you bring deep visibility around the possible drifts and misconfiguration over 80 different AWS Services mapping it with the most commom standard and framework in the market and with AWS Well-Architected Framework too :star_struck:
 
 
-#### Login in Cloud One and go to Conformity
+#### Login in Cloud One and go to Network Security
 
 Upon signing into Cloud One, you’ll be prompted to select between the 6 services in Cloud One platform, select Conformity in the main page.
 
@@ -24,8 +24,50 @@ After it you will be able to begin adding your AWS account after you click in "A
 
 ![Integration4](/images/integration4.png) 
 
-First you will need to define the Account Name and Environtment Type of the AWS account that you will integrating in Cloud One - Conformity to be easy to locate the account inside the dashboard. 
-For further detail and additonal assistance, please refer to the help video in the page:
+````
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "cloudconnectorEc2",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeImages",
+        "ec2:DescribeInternetGateways",
+        "ec2:DescribeInstances",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeRegions",
+        "ec2:DescribeNatGateways",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeRouteTables",
+        "ec2:DescribeSecurityGroups"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "cloudconnectorIamPolicy",
+      "Effect": "Allow",
+      "Action": [
+        "iam:GetPolicyVersion",
+        "iam:GetPolicy"
+      ],
+      "Resource": "arn:aws:iam::*:policy/NetworkSecurityPolicy"
+    },
+    {
+      "Sid": "cloudconnectorIamRole",
+      "Effect": "Allow",
+      "Action": [
+        "iam:GetRole",
+        "iam:ListAttachedRolePolicies"
+      ],
+      "Resource": "arn:aws:iam::*:role/NetworkSecurityRole"
+    }
+  ]
+}
+````
 
 ![Integration5](/images/integration5.png) 
 

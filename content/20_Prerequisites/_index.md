@@ -1,11 +1,11 @@
 ---
-title: "Prerequisites"
-chapter: false
+title: "Requirements"
+chapter: true
 weight: 40
 pre: "<b>3. </b>"
 ---
 
-### Prerequisites to start running the labs
+## Prerequisites to start running the labs
 As part of this scenario, you will need the following items to be able to build this environment:
 
 - Cloud One — Account -> [Register for a free trial](https://cloudone.trendmicro.com/SignUp.screen#)

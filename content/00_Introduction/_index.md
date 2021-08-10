@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-chapter: false
+chapter: true
 weight: 5
 pre: "<b>1. </b>"
 ---
