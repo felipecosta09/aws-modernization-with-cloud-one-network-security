@@ -21,6 +21,6 @@ As a recommended deployment method in the Cloud One - Network Security documenta
 
 {{% notice note %}}
 <p style='text-align: left;'>
-In this example you don't need to create the Inspection and Management subnet because the CloudFormation template suggested by the C1NS will create for you these 2 subnets.
+In this example you don't need to create the Inspection and Management subnet because the CloudFormation template suggested by the Cloud One - Network Security will create it for you.
 </p>
 {{% /notice %}}
