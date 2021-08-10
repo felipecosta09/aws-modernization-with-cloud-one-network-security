@@ -1,7 +1,7 @@
 ---
 title: "Network Security Architecture"
 chapter: true
-weight: 30
+weight: 10
 pre: "<b>2. </b>"
 ---
 

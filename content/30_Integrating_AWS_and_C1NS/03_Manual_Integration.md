@@ -7,16 +7,17 @@ pre: "<b>4.1 </b>"
 
 ### Integrating AWS with Cloud One Network Security
 
-After you create a Cloud One account using this link here: [Register](https://cloudone.trendmicro.com/register) on pre-requisites. Now we will be integrating your AWS account into Cloud One - Network Security to help you bring deep visibility around the possible drifts and misconfiguration over 80 different AWS Services mapping it with the most commom standard and framework in the market and with AWS Well-Architected Framework too :star_struck:
-
+After you create a Cloud One account using this link here: [Register](https://cloudone.trendmicro.com/register) on Prerequisites. 
 
 #### Login in Cloud One and go to Network Security
 
-Upon signing into Cloud One, you’ll be prompted to select between the 6 services in Cloud One platform, select Network Security in the main page.
+Upon signing into Cloud One, you’ll be prompted to select between the 7 services in Cloud One platform, select Network Security in the main page.
 
 ![C1NS1](/images/Login_C1.png) 
 
 ![C1NS2](/images/C1NS_Service.png) 
+
+---
 
 After it you will be able to begin adding your AWS account after you click in "Start Wizard".
 

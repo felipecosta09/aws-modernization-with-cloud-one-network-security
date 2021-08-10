@@ -1,7 +1,7 @@
 ---
 title: "Trend Micro Cloud One"
 chapter: false
-weight: 5
+weight: 6
 ---
 
 ### What is Trend Micro Cloud One?

@@ -1,7 +1,7 @@
 ---
 title: "Cloud One Network Security"
 chapter: false
-weight: 6
+weight: 7
 ---
 
 ### Powerful Network Layer Security Designed for the Cloud

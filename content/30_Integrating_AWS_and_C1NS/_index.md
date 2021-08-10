@@ -1,7 +1,7 @@
 ---
 title: "Deploy Cloud One - Network Security"
 chapter: false
-weight: 50
+weight: 30
 pre: "<b>4. </b>"
 ---
 
@@ -19,8 +19,4 @@ As a recommended deployment method in the Cloud One - Network Security documenta
 
 ![Edge_Deployment](/images/C1NS_Edge_Deployment.png) 
 
-{{% notice note %}}
-<p style='text-align: left;'>
-In this example you don't need to create the Inspection and Management subnet because the CloudFormation template suggested by the Cloud One - Network Security will create it for you.
-</p>
-{{% /notice %}}
+

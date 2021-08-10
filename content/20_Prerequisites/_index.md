@@ -1,7 +1,7 @@
 ---
-title: "Requirements"
+title: "Prerequisites"
 chapter: true
-weight: 40
+weight: 20
 pre: "<b>3. </b>"
 ---
 
