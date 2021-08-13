@@ -59,11 +59,12 @@ The workshop is divided into the sections listed below. Plan on 2 hours to compl
 ### **Additional Help**
 For any additional help please reach out to: 
 
-- Fernando Cardoso - (fernando_cardoso@trendmicro.com)
-- Felipe Costa - (felipe_costa@trendmicro.com)
+- Fernando Cardoso - Email: fernando_cardoso@trendmicro.com
+- Felipe Costa - Email: felipe_costa@trendmicro.com
+- Franzvitor Fiorim - Email: franzvitor_fiorim@trendmicro.com
 
 <p>
-<a  href="mailto:fernando_cardoso@trendmicro.com;felipe_costa@trendmicro.com?subject=Simplifying Network Security in the Cloud with Trend Micro - Cloud One"  target="_blank" rel="noopener noreferrer"  class="btn btn-default">  
+<a  href="mailto:fernando_cardoso@trendmicro.com;felipe_costa@trendmicro.com;franzvitor_fiorim@trendmicro.com?subject=Simplifying Network Security in the Cloud with Trend Micro - Cloud One"  target="_blank" rel="noopener noreferrer"  class="btn btn-default">  
   Talk to us
   <i class="fas fa-paper-plane"></i>
 </a>
