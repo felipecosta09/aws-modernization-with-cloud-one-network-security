@@ -121,7 +121,48 @@ After doing the processes describe in the Cloud One console you will need to pas
 <details>
   <summary> -> <code>CLICK HERE</code> to see the steps by steps described in the console.</summary>
 
+#### 4.1 Access your AWS account and search for IAM and after go to Roles and click on Create Role
+![C1NS1](/images/create_net_sec_7.png) 
 
+#### 4.2 Create Role
+
+-  For select type of trusted entity, choose Another AWS account
+-  Copy and Paste the Account ID provide in the Cloud One console
+  - Account ID: <code>737318609257</code>
+-  Check the Option Require external ID 
+-  Copy and Paste the External ID provide in the Cloud One console.
+  - External ID: <code>a5c44e4b-6abb-4ea1-a3c7-3a387fce540d</code>
+-  Click Next:Permissions
+
+
+![C1NS1](/images/create_net_sec_8.png) 
+
+#### 4.3 Attach permissions policies 
+
+- Search for the policy name that you creted on the previous step, if you used our recommendation you shoueld search for this here <code>NetworkSecurityPolicy</code>
+- Select the Role 
+- Click Next:Tags
+
+![C1NS1](/images/create_net_sec_9.png) 
+
+
+#### 4.4 Optional - Add Tags 
+
+![C1NS1](/images/create_net_sec_10.png) 
+
+#### 4.5 Add the Role Name, in our example is <code>NetworkSecurityRole</code>, review and click Create Role
+![C1NS1](/images/create_net_sec_11.png)
+
+#### 4.6 Once you create the role, search for the name of the role that you create and click in the name of the Role.
+
+- If you used the recommended name for the Role, you shoudl search for this one here: <code>NetworkSecurityRole</code>
+![C1NS1](/images/create_net_sec_12.png) 
+
+#### 4.7 Copy the Role ARN and go back to the Cloud One - Network Security console
+![C1NS1](/images/create_net_sec_13.png) 
+
+#### 4.8 Paste the Role ARN and Click Create Account Name
+![C1NS1](/images/create_net_sec_6.png) 
 
 </details>
 ---
