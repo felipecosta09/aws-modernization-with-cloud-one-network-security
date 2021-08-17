@@ -1,7 +1,7 @@
 ---
-title: "Enable CloudWatch Visibility"
+title: "Test the Protection"
 chapter: true
-weight: 120
+weight: 50
 pre: "<b>5. </b>"
 ---
 

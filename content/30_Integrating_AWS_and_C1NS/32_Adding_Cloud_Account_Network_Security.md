@@ -1,5 +1,5 @@
 ---
-title: "Cloud One - Network Security Deployment"
+title: "Cloud One - Network Security Adding Cloud Account"
 chapter: false
 weight: 32
 pre: "<b>4.2 </b>"
@@ -128,10 +128,10 @@ After doing the processes describe in the Cloud One console you will need to pas
 
 -  For select type of trusted entity, choose Another AWS account
 -  Copy and Paste the Account ID provide in the Cloud One console
-  - Account ID: <code>737318609257</code>
+  - **Account ID:** copy this information from Cloud One Wizard 
 -  Check the Option Require external ID 
 -  Copy and Paste the External ID provide in the Cloud One console.
-  - External ID: <code>a5c44e4b-6abb-4ea1-a3c7-3a387fce540d</code>
+  - **External ID:** copy this information from Cloud One Wizard 
 -  Click Next:Permissions
 
 
@@ -169,6 +169,9 @@ After doing the processes describe in the Cloud One console you will need to pas
 
 ---
 
-#### 5. Now you will need to give a name for this AWS account on Cloud One and click "+ Add Cloud Account"
+#### 5. Now you will need to give a name for this AWS account on Cloud One and click on "+ Add Cloud Account"
+![C1NS1](/images/create_net_sec_14.png) 
 
-#### 6. Once it is successfully created you can click "Close"
+#### 6. Once it is successfully and you have added the cloud account it's time to click Deploy Protection for us to deploy the Network Security AMI in the AWS environment
+
+![C1NS1](/images/create_net_sec_15.png) 

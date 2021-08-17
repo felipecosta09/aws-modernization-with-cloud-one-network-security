@@ -1,8 +1,8 @@
 ---
-title: "Testing in Protection Mode"
+title: "Testing without Protection"
 chapter: false
-weight: 110
-pre: "<b>5.2 </b>"
+weight: 51
+pre: "<b>5.1 </b>"
 ---
 
 ### Integrating AWS with Cloud One Network Security

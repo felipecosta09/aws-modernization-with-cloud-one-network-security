@@ -1,8 +1,8 @@
 ---
-title: "Test the Protection"
+title: "Enable CloudWatch Visibility"
 chapter: true
-weight: 90
-pre: "<b>5. </b>"
+weight: 40
+pre: "<b>4. </b>"
 ---
 
 ### Create a Cloud Watch Panel
