@@ -2,7 +2,7 @@
 title: "Enable CloudWatch Visibility"
 chapter: true
 weight: 40
-pre: "<b>4. </b>"
+pre: "<b>5. </b>"
 ---
 
 ### Create a Cloud Watch Panel

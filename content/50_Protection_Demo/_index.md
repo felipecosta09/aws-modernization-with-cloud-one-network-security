@@ -2,7 +2,7 @@
 title: "Test the Protection"
 chapter: true
 weight: 50
-pre: "<b>5. </b>"
+pre: "<b>6. </b>"
 ---
 
 ### Create a Cloud Watch Panel

@@ -2,7 +2,7 @@
 title: "Testing in Protection Mode"
 chapter: false
 weight: 52
-pre: "<b>5.2 </b>"
+pre: "<b>6.2 </b>"
 ---
 
 ### Integrating AWS with Cloud One Network Security

@@ -2,7 +2,7 @@
 title: "Testing without Protection"
 chapter: false
 weight: 51
-pre: "<b>5.1 </b>"
+pre: "<b>6.1 </b>"
 ---
 
 ### Integrating AWS with Cloud One Network Security
