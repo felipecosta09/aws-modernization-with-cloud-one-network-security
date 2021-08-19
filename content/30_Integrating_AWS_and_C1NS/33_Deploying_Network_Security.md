@@ -69,3 +69,106 @@ The CloudFormation template will create 2 new subnets for you, the Inspection an
 #### 9. Click in Download to get the CloudFormation template
 
 ![C1NS1](/images/deploy_protec_9.png) 
+
+---
+
+#### 10. Now we will need to edit CloudFormation template (deploymentScript.yaml) that you downloaded from Cloud One console. 
+
+You can use any text editor. In our example we are using [Visual Studio Code](https://code.visualstudio.com/download).
+
+##### 10.1 Open CFT that you downloaded called - deploymentScript.yaml on your IDE
+
+![C1NS1](/images/deploy_protec_10.png) 
+
+---
+
+##### 10.2 In the code, search for <code># -- END VTPS CLI</code>
+
+![C1NS1](/images/deploy_protec_11.png) 
+
+---
+
+##### 10.3 Add the code bellow before the line of the string "# -- END VTPS CLI". These lines are to enable the forward event to the AWS CloudWatch and to use the America EST timezone.
+
+```
+  edit
+- |
+  log
+- |
+  cloudwatch inspection-event enable
+- |
+  exit
+- |
+  commit
+- |
+  exit
+- |
+  save-config -y
+- |
+  edit
+- |
+  gen
+- |
+  timezone America New_York
+- |
+  exit
+- |
+  commit
+- |
+  exit
+- |
+  save-config -y
+- |
+```
+
+---
+
+
+##### 10.4  After making the changes, the code will be similar to the image bellow. The selection is the line that I added. Once changed, save the file.
+
+{{% notice warning %}}
+<p style='text-align: left;'>
+<b>Be careful with the indention of the code, otherwise you will broke the template.</b>
+</p>
+{{% /notice %}}
+
+![C1NS1](/images/deploy_protec_12.png) 
+
+---
+
+#### 11. Go back to the AWS Console in the service CloudFormation and click in "Create Stack"
+
+![C1NS1](/images/deploy_protec_13.png) 
+
+---
+
+#### 12.  Select the "Upload a template file", choose the CloudFormation template and click "Next"
+
+![C1NS1](/images/deploy_protec_14.png) 
+
+---
+
+#### 13.  Insert the Stack Name <code>Modernization-Workshop-Network-Security-Appliance</code> and click "Next"
+
+![C1NS1](/images/deploy_protec_15.png) 
+
+---
+#### 14. (Optional) Add tags and click "Next"
+
+![C1NS1](/images/deploy_protec_16.png) 
+
+---
+#### 15. Review, check the box "I acknowledge ..", and click on Create stack
+
+![C1NS1](/images/deploy_protec_17.png)
+![C1NS1](/images/deploy_protec_18.png)
+![C1NS1](/images/deploy_protec_19.png)
+
+---
+
+#### 16. Wait until the successful creation of the stack and you will be ready to move to the next chapter.
+
+![C1NS1](/images/deploy_protec_20.png) 
+
+---
+> **Et voila, we just generated completed the deployment of the Cloud One - Network Security Appliance in our AWS enviornment** 🤩 :cloud: 🤖 :rocket:
