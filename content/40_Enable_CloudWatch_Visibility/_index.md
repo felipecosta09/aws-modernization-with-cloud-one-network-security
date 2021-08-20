@@ -5,19 +5,39 @@ weight: 40
 pre: "<b>5. </b>"
 ---
 
-### Create a Cloud Watch Panel
+# Enable CloudWatch Visibility
 
-The form of consumption of logs by Cloud One Network Security takes place through third party, you can use any Syslog Server/SIEM but in this case we will use AWS Cloud Watch.
+### Create an Amazon CloudWatch Panel
 
-To do it you can read the logs in the Cloud Watch service or we can use a custom Panel in AWS Cloud Watch. For this approach we can deploy another Cloud Formation template.
+The form of consumption of logs by Trend Micro Cloud One - Network Security takes place through third party, you can use any Syslog Server/SIEM but in this case we will use Amazon CloudWatch.
 
+To do it you can read the logs in the Cloud Watch service or we can use a custom Panel in Amazon CloudWatch. For this approach we can deploy CloudFormation template to simplify our life.
 
+> Let's create the Panel from CFT :laptop: :cloud: :bar_chart:
 
+#### 1. Go to AWS console, than CloudFormation services and click in "Create Stack>With new resources(standard)"
 
+{{% notice note %}}
+<p style='text-align: left;'>
+If you follow the steps before correctly you will see the other two stacks that we created before in the AWS console.
+</p>
+{{% /notice %}}
 
-![CloudWatch1](/images/CF.png)
+![CloudWatch1](/images/CF1.png)
+
+---
+
+#### 2. Download the CloudFormation Template
+
+**Download** -> [Network Security CloudWatch Template](/cft/Network_Security_CloudWatch.yml)
+
+---
+
+#### 3. In the create stack, select the "Upload a template file" and upload the file (Network_Security_CloudWatch.yml) and click "Next"
 
 ![CloudWatch2](/images/Create_Stack.png)
+
+---
 
 ![CloudWatch3](/images/Stack_Details.png)
 
