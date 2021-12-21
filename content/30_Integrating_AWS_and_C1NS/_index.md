@@ -7,7 +7,7 @@ pre: "<b>4. </b>"
 
 ### Architecture Base for the Lab
 
-To simulate a real customer environment, we will use a pre-built Cloud Formation template that will create the following resources all in the same AZ:
+To simulate a real customer environment, we will use a pre-built CloudFormation template that will create the following resources all in the same Availibility Zone(AZ):
 
 - 2 - Subnets
 - 1 - NAT Gateway

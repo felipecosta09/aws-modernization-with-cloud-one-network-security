@@ -21,10 +21,10 @@ VPCs—the management burden and costs quickly add up.
 
 Changes often have to be made to the network infrastructure itself to accommodate those additional components, with some security solutions
 requiring IP addresses to be changed or specific topologies to be deployed. New devices inserted in the network can also become “critical” going
-forward, meaning they can’t be easily (or cheaply) removed or modified. And as more pieces get added, they bring inefficiencies that can disrupt or
+forward, meaning they can’t be easily (or cheaply) removed or modified. As more pieces get added, they bring inefficiencies that can disrupt or
 slow down network traffic, affecting core business operations and processes.
 
-There are cloud-native security solutions, of course, but these are often tied to specific platforms, such as Amazon Web Services (AWS). Having a different security solution for every cloud prevents enterprises from getting a centralized view of the threats they face.
+There are cloud-native security solutions, of course, but these are often tied to specific platforms, such as Amazon Web Services (AWS). Having a different security solution for every cloud provider prevents enterprises from getting a centralized view of the threats they face.
 It also increases the risks of management dashboard/console overload, increasing the odds that important security alerts will be missed. These
 platform-specific cloud solutions also tend to lack key security features, such as virtual patching at the network layer, egress filtering, and deep
 packet inspection.

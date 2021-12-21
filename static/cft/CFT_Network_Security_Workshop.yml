@@ -8,26 +8,26 @@ Mappings:
       DvwaAMI: ami-09e67e426f25ce0d7
       BastionLinuxAMI: ami-09e67e426f25ce0d7
       PrivateLinuxAMI: ami-09e67e426f25ce0d7
-      BastionWinAMI: ami-0fa60543f60171fe3
-      PrivateWinAMI: ami-0fa60543f60171fe3
+      BastionWinAMI: ami-0d80714a054d3360c
+      PrivateWinAMI: ami-0d80714a054d3360c
     us-east-2: #Ohio
       DvwaAMI: ami-00399ec92321828f5
       BastionLinuxAMI: ami-00399ec92321828f5
       PrivateLinuxAMI: ami-00399ec92321828f5
-      BastionWinAMI: ami-086850e3dda52e84a
-      PrivateWinAMI: ami-086850e3dda52e84a
+      BastionWinAMI: ami-0c95aae83dc5a60ac
+      PrivateWinAMI: ami-0c95aae83dc5a60ac
     us-west-1: #North California
       DvwaAMI: ami-0d382e80be7ffdae5
       BastionLinuxAMI: ami-0d382e80be7ffdae5
       PrivateLinuxAMI: ami-0d382e80be7ffdae5
-      BastionWinAMI: ami-0ae8e32a263869f9b
-      PrivateWinAMI: ami-0ae8e32a263869f9b
+      BastionWinAMI: ami-0fc6888a6bb1dfba6
+      PrivateWinAMI: ami-0fc6888a6bb1dfba6
     us-west-2: #Oregon
       DvwaAMI: ami-03d5c68bab01f3496
       BastionLinuxAMI: ami-03d5c68bab01f3496
       PrivateLinuxAMI: ami-03d5c68bab01f3496
-      BastionWinAMI: ami-0b9909553e2f757f4
-      PrivateWinAMI: ami-0b9909553e2f757f4
+      BastionWinAMI: ami-03e68166e462a9c52
+      PrivateWinAMI: ami-03e68166e462a9c52
 
 Parameters:
   EnvironmentName:
