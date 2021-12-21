@@ -172,6 +172,18 @@ After doing the processes describe in the Cloud One console you will need to pas
 #### 5. Now you will need to give a name for this AWS account on Cloud One and click on "+ Add Cloud Account"
 ![C1NS1](/images/create_net_sec_14.png) 
 
-#### 6. Once it is successfully and you have added the cloud account it's time to click Deploy Protection for us to deploy the Network Security AMI in the AWS environment
+#### 6. Once it is successfully and you have added the cloud account it's time to click "View Security Posture"
 
-![C1NS1](/images/create_net_sec_15.png) 
+![C1NS1](/images/create_net_sec_15.png)
+
+---
+
+#### 7. The security posture page is to see how the outbound traffic in your environment is currently protected. 
+
+To evaluate your security posture, Network Security looks at the VPCs across all of your AWS regions to determine if the Elastic Network Interfaces (ENIs) in those VPCs have outbound internet access.
+Use this assessment to determine where to deploy Network Security for the assets in your environment that need outbound protection. 
+
+![C1NS1](/images/create_net_sec_16.png)
+
+---
+#### When done viewing the security posture page click on **Deploy Protection** :cloud: :laptop: :rocket:

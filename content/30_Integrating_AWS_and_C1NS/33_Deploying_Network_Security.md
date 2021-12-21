@@ -7,11 +7,11 @@ pre: "<b>4.3 </b>"
 
 ### Deploying Cloud One - Network Security Appliance 
 
-Once you finish the steps to add the Cloud Account, you can start deploying the Network Security appliance. Here are the steps-by-steps:
+Once you finish the steps to add the Cloud Account, you can start deploying the Network Security appliance.
 
-----
+---
 
-#### 1. Select a cloud account that you created previously and click on Next: Select Asset
+#### 1. Select the cloud account that you created previously and click on **Next: Select Asset**
 
 ![C1NS1](/images/deploy_protec_1.png) 
 
@@ -24,7 +24,7 @@ Once you finish the steps to add the Cloud Account, you can start deploying the 
 
 ---
 
-#### 3. Select the SSH Key Pair that the Appliance will use and the API Key from Cloud One. Then you can click "Next: Use Deployment Script"
+#### 3. Select the Availibility Zone(s) that the Appliance will include in the deployment script. Then click on **Next: Finalize Parameters** 
 
 {{% notice note %}}
 <p style='text-align: left;'>
@@ -36,19 +36,25 @@ The CloudFormation template will create 2 new subnets for you, the Inspection an
 
 ---
 
-#### 4. Click on Generate a new API Key and you will forward to the page below where you will need to select your Cloud One acccount and click Go
+#### 4. Click on **Generate a new API Key** and you will be redirected to the administrator page below in step 5 where you will need to select your Cloud One acccount and click Go
+
+![C1NS1](/images/deploy_protec_ssh.png) 
+
+---
 
 ![C1NS1](/images/deploy_protec_4.png) 
 
 ---
 
-#### 5. Click on New to create the API Key
+#### 5. Click on **New** to create the API Key
 
 ![C1NS1](/images/deploy_protec_5.png) 
 
 ---
 
-#### 6. Select Full Access Role, the prefer language for you and the perfer Timezone. After you can click Next
+#### 6. Select **Full Access Role**, the preferred **language** for you and the preferred **Timezone**. 
+
+- Click on **Next**
 
 ![C1NS1](/images/deploy_protec_6.png)
 
@@ -62,7 +68,7 @@ The CloudFormation template will create 2 new subnets for you, the Inspection an
 
 #### 8. Now you will need to go back to the tab with the Cloud One - Network Security wizard and paste the API key there, than you can click Next: Use Deployment Script
 
-![C1NS1](/images/deploy_protec_8.png) 
+![C1NS1](/images/deploy_protec_ssh.png)
 
 ---
 
@@ -88,7 +94,9 @@ You can use any text editor. In our example we are using [Visual Studio Code](ht
 
 ---
 
-##### 10.3 Add the code bellow before the line of the string "# -- END VTPS CLI". These lines are to enable the forward event to the AWS CloudWatch and to use the America EST timezone.
+##### 10.3 Add the code snippet provided **before** the line string **"# -- END VTPS CLI"**. 
+
+- These lines are to enable the event forwarding to AWS CloudWatch and use the America EST timezone.
 
 ```
   edit
@@ -124,11 +132,11 @@ You can use any text editor. In our example we are using [Visual Studio Code](ht
 ---
 
 
-##### 10.4  After making the changes, the code will be similar to the image bellow. The selection is the line that I added. Once changed, save the file.
+##### 10.4  After making the changes, the code will be similar to the image below. The selection is the line that I added. Once changed, save the file.
 
 {{% notice warning %}}
 <p style='text-align: left;'>
-<b>Be careful with the indention of the code, otherwise you will broke the template.</b>
+<b>Be careful with the indention of the code, otherwise the template format may break.</b>
 </p>
 {{% /notice %}}
 

@@ -9,9 +9,9 @@ weight: 1
 ## Simplifying Network Security in the Cloud with Trend Micro - Cloud One
 ![TrendMicro](/images/logo.png)
 
-In this workshop, you’ll learn how to leverage edge protection deployment with Cloud One - Network Security to provides a powerful network security layer which can be seamless into your existing AWS architectures making it easier and simple to apply cloud security. This technology has the goal to inspect inbound and outbound traffic, and detects and prevent malicious payload and attacks against your application running in AWS enabling organizations to securely achieve their business goals.
+In this workshop, you’ll learn how to leverage edge protection deployment with Cloud One - Network Security provides a powerful network security layer which can be deployed seamlessly into your existing AWS architecture making it easier and more simple to apply cloud security. This technology has the goal to inspect inbound and outbound traffic, and detect and prevent malicious payloads and attacks against your application running in AWS enabling organizations to securely achieve their business goals.
 
-Using **Trend Micro - Cloud One, AWS Internet Gateway, AWS NAT Gateway, AWS CloudWatch**, and **AWS Services**, you’ll get hands-on experience implementing an automated **CloudFormation** security and compliance workflow. 
+Using **Trend Micro - Cloud One, AWS Internet Gateway, AWS NAT Gateway, AWS CloudWatch**, and **AWS Services**, you’ll get hands-on experience implementing an Network Security via CloudFormation to automate deployment, security and compliance workflows. 
 
 --------
 
@@ -62,9 +62,10 @@ For any additional help please reach out to:
 - Fernando Cardoso - Email: fernando_cardoso@trendmicro.com
 - Felipe Costa - Email: felipe_costa@trendmicro.com
 - Franzvitor Fiorim - Email: franzvitor_fiorim@trendmicro.com
+- Justin Perkins - Email: justin_perkins@trendmicro.com
 
 <p>
-<a  href="mailto:fernando_cardoso@trendmicro.com;felipe_costa@trendmicro.com;franzvitor_fiorim@trendmicro.com?subject=Simplifying Network Security in the Cloud with Trend Micro - Cloud One"  target="_blank" rel="noopener noreferrer"  class="btn btn-default">  
+<a  href="mailto:fernando_cardoso@trendmicro.com;felipe_costa@trendmicro.com;franzvitor_fiorim@trendmicro.com;justin_perkins@trendmicro.com?subject=Simplifying Network Security in the Cloud with Trend Micro - Cloud One"  target="_blank" rel="noopener noreferrer"  class="btn btn-default">  
   Talk to us
   <i class="fas fa-paper-plane"></i>
 </a>

@@ -5,7 +5,7 @@ weight: 31
 pre: "<b>4.1 </b>"
 ---
 
-Here is the base AWS environment that we will be building using CloudFormation template before deploying the Cloud One - Network Security:
+Here is the base AWS environment that we will be building using CloudFormation template before deploying the Cloud One- Network Security:
 
 ![C1NS1](/images/C1NS_AWS_enviroment.png) 
 
@@ -19,7 +19,7 @@ In this example you don't need to create the Inspection and Management subnet be
 
 ## 1. Creating the base AWS environment using AWS CloudFormation Template
 
-You can use the CloudFormation template bellow to create the infrastructure in same AZ with the 2 subnets, NAT Gateway, Internet Gateway, and the EC2 instances.
+You can use the CloudFormation template below to create the infrastructure in same AZ with the 2 subnets, NAT Gateway, Internet Gateway, and the EC2 instances.
 
 **Download** -> [CloudFormation Template](/cft/CFT_Network_Security_Workshop.yml)
 
@@ -37,11 +37,11 @@ You can use the CloudFormation template bellow to create the infrastructure in s
 
 ---
 
-### 4. Uploding the CloudFormation Template
+### 4. Uploading the CloudFormation Template
 
-- You will need to select the option "Upload a tempalte file"
+- You will need to select the option "Upload a template file"
 - Click on "Choose the File" 
-- Select the CloudFormation template that you Download in the step (1) from this page 
+- Select the CloudFormation template that you downloaded in the step(1) from this page 
 - Click on the button "Next"
 
 ![C1NS1](/images/create_env_3.png) 
@@ -54,7 +54,7 @@ You can use the CloudFormation template bellow to create the infrastructure in s
 
 - **InspectionVPCCIDR:** the CIDR that you want to use for the VPC. You don't need to change it, if you don't to change the default configuration.
     
-- **KeyPair:** Your keypair Name
+- **KeyPair:** Your KeyPair name
 
 - **MyPublicIP:** Your public IP in CIDR. (e.g. 191.162.228.91/ 32 . You can grab it using a few tools or websites (https://ipinfo.io/ip). It will be use to only allow your IP to access the vulnerable application (DVWA))
 
@@ -85,7 +85,7 @@ Don't forget to create the Key Pair before creating the CloudFormation stack. He
 
 ---
 
-### 5.1. Stake details example:
+### 5.1. Stack details example:
 
 ![C1NS1](/images/create_env_4.png) 
 
@@ -93,7 +93,7 @@ Don't forget to create the Key Pair before creating the CloudFormation stack. He
 
 ### 6. Configure stack options
 
-You could add some tags for this environment, but it's not mandatory. Or you can just click Next.
+Scroll down and click **Next**, or optionally define tags to the evironment if desired.
 
 ![C1NS1](/images/create_env_5.png) 
 
@@ -109,13 +109,13 @@ You could add some tags for this environment, but it's not mandatory. Or you can
 
 ---
 
-### 8. You can follow up the creattion of the stack thorugh the events in the CloudFormation:
+### 8. You can follow up the creation of the stack through the events in the CloudFormation:
 
 ![C1NS1](/images/create_env_10.png) 
 
 ---
 
-### 9. Once it gives you the "Create Complete" in the stack view we are good to move for the next step that will be the deployment of the Cloud One Network Security.
+### 9. Once the stack status reaches "Create Complete" we can proceed to deployment of the Cloud One Network Security AMI.
 
 ![C1NS1](/images/create_env_11.png) 
 
