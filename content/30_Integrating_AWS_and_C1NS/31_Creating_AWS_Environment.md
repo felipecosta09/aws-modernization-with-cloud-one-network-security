@@ -25,13 +25,13 @@ You can use the CloudFormation template below to create the infrastructure in sa
 
 ---
 
-### 2. Go to the AWS Web Console and search for CloudFormation:
+### 2. Go to the [AWS Console](aws.amazon.com/) and search for **CloudFormation**:
 
 ![C1NS1](/images/create_env.png) 
 
 ---
 
-### 3. Select "Create stack"
+### 3. Select **Create stack**
 
 ![C1NS1](/images/create_env_2.png) 
 
@@ -39,16 +39,32 @@ You can use the CloudFormation template below to create the infrastructure in sa
 
 ### 4. Uploading the CloudFormation Template
 
-- You will need to select the option "Upload a template file"
-- Click on "Choose the File" 
+- Select the option to **Upload a template file**
+- Click on **Choose the File** 
 - Select the CloudFormation template that you downloaded in the step(1) from this page 
-- Click on the button "Next"
+- Click on **Next**
 
 ![C1NS1](/images/create_env_3.png) 
 
 ---
 
 ### 5. Specifying additional stack parameters
+
+{{% notice info %}}
+<p style='text-align: left;'>
+A Key Pair is required before continuing this CloudFormation deployment. If you need help creating a Key Pair -> <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair" target="_top">Create a key pair</a>
+</p>
+{{% /notice %}}
+
+
+<details>
+  <summary> -> <code>CLICK HERE</code> to see how to create key pair</summary>
+
+**AWS Console -> EC2 -> Key Pairs -> Create key pair**
+
+![C1NS1](/images/create_env_9.png) 
+
+</details>
 
 - **Stack Name:**  Name of your stack
 
@@ -66,23 +82,6 @@ You can use the CloudFormation template below to create the infrastructure in sa
 
 - **ProtectedPublicSubnetCIDR:** the AZ what you want to use to your Public subnet. You don't need to change it, if you don't want to.
 
-{{% notice info %}}
-<p style='text-align: left;'>
-Don't forget to create the Key Pair before creating the CloudFormation stack. Here is the link how to do it -> <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair" target="_top">Create a key pair</a>
-</p>
-{{% /notice %}}
-
-
-<details>
-  <summary> -> <code>CLICK HERE</code> to see how to create key pair</summary>
-
-**AWS Console -> EC2 -> Key Pairs -> Create key pair**
-
-![C1NS1](/images/create_env_9.png) 
-
-</details>
----
-
 ---
 
 ### 5.1. Stack details example:
@@ -93,13 +92,15 @@ Don't forget to create the Key Pair before creating the CloudFormation stack. He
 
 ### 6. Configure stack options
 
-Scroll down and click **Next**, or optionally define tags to the evironment if desired.
+Leave as fields as default and click **Next**, or optionally define tags to the evironment if desired.
 
 ![C1NS1](/images/create_env_5.png) 
 
 ---
 
-### 7. Review the parameters, mark the checkbox the "I acknowledge... " and click Create Stack
+### 7. Review the template parameters 
+- Mark the checkbox the **"I acknowledge... "**
+- Click on **Create Stack**
 
 ![C1NS1](/images/create_env_6.png) 
 
@@ -109,13 +110,16 @@ Scroll down and click **Next**, or optionally define tags to the evironment if d
 
 ---
 
-### 8. You can follow up the creation of the stack through the events in the CloudFormation:
+### 8. Follow up the events during creation of the stack.
+- Select the **Events** tab
+- Click **Refresh**
 
 ![C1NS1](/images/create_env_10.png) 
 
 ---
 
-### 9. Once the stack status reaches "Create Complete" we can proceed to deployment of the Cloud One Network Security AMI.
+### 9. Ensure the stack status is **Create_Complete**. 
+- Select the **Stack info** tab
 
 ![C1NS1](/images/create_env_11.png) 
 

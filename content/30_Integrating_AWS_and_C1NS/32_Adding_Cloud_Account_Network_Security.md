@@ -5,15 +5,18 @@ weight: 32
 pre: "<b>4.2 </b>"
 ---
 
-### Integrating AWS with Cloud One Network Security
+### Integrating AWS with Cloud One- Network Security
 
-After you create a Cloud One account using this link here: [Register](https://cloudone.trendmicro.com/register) from Prerequisites, you will be able to login in Trend Micro - Cloud One console and we can start the process of deploying the Network Security appliance using the setup wizard.
+{{% notice info %}}
+<p style='text-align: left;'>
+A Cloud One Account is required to proceed. If you have not registered for a Cloud One account please go <a href="https://cloudone.trendmicro.com/register" target="_top">here.</a>
+</p>
+{{% /notice %}}
 
 ----
 
-#### 1. Log in Cloud One and go to Network Security
-
-Upon signing into Cloud One, you’ll be prompted to select between the 7 services in Cloud One platform, select Network Security in the main page.
+#### 1. Log in [Cloud One](https://cloudone.trendmicro.com/)
+- Select the **Network Security** tile.
 
 ![C1NS1](/images/Login_C1.png) 
 
@@ -21,30 +24,40 @@ Upon signing into Cloud One, you’ll be prompted to select between the 7 servic
 
 ---
 
-#### 2. After it you will be able to begin adding your AWS account after you click in "Start Wizard".
+#### 2. Click on **Start Wizard**.
 
 ![C1NS3](/images/C1NS_Wizard.png)
 
 ---
 
-#### 3. Now we will need to create an IAM policy for the Network Security in your AWS account
+#### 3. Create an IAM policy for Network Security in your AWS account
 
-Follow the steps-by-steps describe in the Cloud One console
+- Follow the step-by-step instructions as described in the Cloud One console.
 
 ![C1NS4](/images/Add_IAM_Policy.png) 
 
 <details>
   <summary> -> <code>CLICK HERE</code> to see the steps by steps described in the console.</summary>
 
-#### 3.1 Access your AWS account and search for IAM and after go to Policies and click on Create Policy
+#### 3.1 Sign in to your [AWS account](aws.amazon.com/)
+- Navigate to **IAM**
+- From left-hand menu, select **Policies** under Access Management
+- Click on **Create Policy**
 
 ![C1NS1](/images/create_net_sec_1.png) 
 
-#### 3.2 Slect the tab JSON, paste the JSON policy from Cloud One Network Security console and then click Next:Tags
+---
+
+#### 3.2 Edit the policy.
+- Select the tab **JSON** 
+- Paste the JSON policy from Cloud One Network Security console
+- Click on **Next: Tags**
 
 ![C1NS1](/images/create_net_sec_2.png) 
 
-Here is the JSON polciy from Cloud One - Network Security:
+---
+
+#### Here is the JSON policy from Cloud One - Network Security:
 
 ````
 {
@@ -90,78 +103,103 @@ Here is the JSON polciy from Cloud One - Network Security:
   ]
 }
 ````
+---
 
-#### 3.3 Click on Next:Review
+#### 3.3 Click on **Next: Review**
 
 ![C1NS1](/images/create_net_sec_3.png) 
 
-#### 3.4 Add the Name for the policy and click Create policy
+---
 
-You can use the recommended name for the policy -> <code>NetworkSecurityPolicy</code>
+#### 3.4 Add the Name for the policy
+- **Name**: <code>NetworkSecurityPolicy</code>
+- Click on **Create policy**
 
 ![C1NS1](/images/create_net_sec_4.png) 
 
-#### 3.5 Policy created successfully 
+---
+
+#### 3.5 Policy created successfully
 
 ![C1NS1](/images/create_net_sec_5.png) 
-
----
 
 </details>
 ---
 
 ---
 
-#### 4. After creating IAM Policy, now we will need to create a cross-account IAM Role in your AWS account
+#### 4. Create a IAM Role in your AWS account for cross-account access
 
-After doing the processes describe in the Cloud One console you will need to paste the Role ARN created from AWS console and paste here and then you will be able to click Create Account Name.
+- Follow the step-by-step instructions as described in the Cloud One console.
+
+After doing the processes describe in the Cloud One console you will need to paste the **Role ARN** created from AWS console and paste here and then you will be able to click Create Account Name.
 
 ![C1NS1](/images/create_net_sec_6.png) 
 
 <details>
-  <summary> -> <code>CLICK HERE</code> to see the steps by steps described in the console.</summary>
+  <summary> -> <code>CLICK HERE</code> to see the step by step instruction as described in the console to create an IAM Role.</summary>
 
-#### 4.1 Access your AWS account and search for IAM and after go to Roles and click on Create Role
-![C1NS1](/images/create_net_sec_7.png) 
+---
 
-#### 4.2 Create Role
+#### 4.1 Sign in to [AWS](aws.amazon.com/)
+- Navigate to **IAM**
+- From the left-hand menu, select **Roles** under access management
+- Click on **Create Role**
+![C1NS1](/images/create_net_sec_7.png)
 
--  For select type of trusted entity, choose Another AWS account
--  Copy and Paste the Account ID provide in the Cloud One console
-  - **Account ID:** copy this information from Cloud One Wizard 
--  Check the Option Require external ID 
--  Copy and Paste the External ID provide in the Cloud One console.
-  - **External ID:** copy this information from Cloud One Wizard 
--  Click Next:Permissions
+---
+
+#### 4.2 Create IAM Role for Cloud One Network Security
+
+-  **Select type of trusted entity**: Another AWS account
+-  Paste the **Account ID** provided in the Cloud One console 
+-  **Check** the Option Require external ID 
+-  Paste the **External ID** provided in the Cloud One console. 
+-  Click on **Next: Permissions**
 
 
 ![C1NS1](/images/create_net_sec_8.png) 
 
+---
+
 #### 4.3 Attach permissions policies 
 
-- Search for the policy name that you creted on the previous step, if you used our recommendation you shoueld search for this here <code>NetworkSecurityPolicy</code>
-- Select the Role 
-- Click Next:Tags
+- Search for the policy name that you created on the previous step, if you used our recommendation search for <code>NetworkSecurityPolicy</code>
+- **Select** the role 
+- Click on **Next: Tags**
 
 ![C1NS1](/images/create_net_sec_9.png) 
 
+---
 
-#### 4.4 Optional - Add Tags 
+#### 4.4 Optional - Add Tags
+- Click on **Next: Review** 
 
 ![C1NS1](/images/create_net_sec_10.png) 
 
-#### 4.5 Add the Role Name, in our example is <code>NetworkSecurityRole</code>, review and click Create Role
+---
+
+#### 4.5 Add the Role Name
+- **Role Name**: <code>NetworkSecurityRole</code>
+- Click on **Create Role**
 ![C1NS1](/images/create_net_sec_11.png)
 
-#### 4.6 Once you create the role, search for the name of the role that you create and click in the name of the Role.
+---
 
-- If you used the recommended name for the Role, you shoudl search for this one here: <code>NetworkSecurityRole</code>
-![C1NS1](/images/create_net_sec_12.png) 
+#### 4.6 After you successfully created the Role. 
+- Search for the name of the role: <code>NetworkSecurityRole</code>
+- Click on the **Role Name**
+![C1NS1](/images/create_net_sec_12.png)
 
-#### 4.7 Copy the Role ARN and go back to the Cloud One - Network Security console
+---
+
+#### 4.7 Copy the Role ARN and navigate back to the Cloud One - Network Security console
 ![C1NS1](/images/create_net_sec_13.png) 
 
-#### 4.8 Paste the Role ARN and Click Create Account Name
+---
+
+#### 4.8 Paste the Role ARN 
+- Click on **Create Account Name**
 ![C1NS1](/images/create_net_sec_6.png) 
 
 </details>
@@ -169,10 +207,13 @@ After doing the processes describe in the Cloud One console you will need to pas
 
 ---
 
-#### 5. Now you will need to give a name for this AWS account on Cloud One and click on "+ Add Cloud Account"
+#### 5. Create a name for this AWS account in Cloud One
+- **Account Name:** <code>Network Security Workshop</code>
+- Click on **+ Add Cloud Account**
 ![C1NS1](/images/create_net_sec_14.png) 
 
-#### 6. Once it is successfully and you have added the cloud account it's time to click "View Security Posture"
+#### 6. You have added your AWS account successfully.
+- Click on **View Security Posture**
 
 ![C1NS1](/images/create_net_sec_15.png)
 
@@ -181,9 +222,11 @@ After doing the processes describe in the Cloud One console you will need to pas
 #### 7. The security posture page is to see how the outbound traffic in your environment is currently protected. 
 
 To evaluate your security posture, Network Security looks at the VPCs across all of your AWS regions to determine if the Elastic Network Interfaces (ENIs) in those VPCs have outbound internet access.
-Use this assessment to determine where to deploy Network Security for the assets in your environment that need outbound protection. 
+Use this assessment to determine where to deploy Network Security for the assets in your environment that need outbound protection.
+
+- Click on **Deploy Protection** to continue.
 
 ![C1NS1](/images/create_net_sec_16.png)
 
 ---
-#### When done viewing the security posture page click on **Deploy Protection** :cloud: :laptop: :rocket:
+#### Congrats!! You have successfully added your AWS Account to Cloud One - Network Security :cloud: :laptop: :rocket:
