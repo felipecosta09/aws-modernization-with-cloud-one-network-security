@@ -5,7 +5,7 @@ weight: 32
 pre: "<b>4.2 </b>"
 ---
 
-### Integrating AWS with Cloud One- Network Security
+### Integrating AWS with Cloud One- Network Security.
 
 {{% notice info %}}
 <p style='text-align: left;'>
@@ -229,4 +229,4 @@ Use this assessment to determine where to deploy Network Security for the assets
 ![C1NS1](/images/create_net_sec_16.png)
 
 ---
-#### Congrats!! You have successfully added your AWS Account to Cloud One - Network Security :cloud: :laptop: :rocket:
+#### Congrats!! You have successfully integrated your AWS Account with Cloud One - Network Security :cloud: :laptop: :rocket:

@@ -1,99 +1,106 @@
 ---
-title: "Testing without Protection"
+title: "Test without Inspection"
 chapter: false
 weight: 51
 pre: "<b>6.1 </b>"
 ---
+ 
+---
 
-### Integrating AWS with Cloud One Network Security
+#### 1. Sign in to the [Cloud One](https://cloudone.trendmicro.com/home)
+- Select the **Network Security** tile
+- Expand **Network** 
+- Click on **Appliances**
+- Click on the **Group/Appliance Name**
 
-After you create a Cloud One account using this link here: [SingUp](https://cloudone.trendmicro.com/SignIn.screen#) on pre-requisites. Now we will be integrating your AWS account into Cloud One - Conformity to help you bring deep visibility around the possible drifts and misconfiguration over 80 different AWS Services mapping it with the most commom standard and framework in the market and with AWS Well-Architected Framework too :star_struck:
+![ns_policy1](/images/ns_aplliances.png)
+![ns_policy1](/images/ns_distro_policy.png)
 
+---
 
-#### Login in Cloud One and go to Network Security
+#### 2. On the Appliance page, DISABLE the Inspection of the Appliance. 
+- Toggle **Inspection State** to **disable** inspection. 
 
-Upon signing into Cloud One, you’ll be prompted to select between the 6 services in Cloud One platform, select Conformity in the main page.
+{{% notice note %}}
+<p style='text-align: left;'>
+With the appliance now in "fallback mode" we will <b>not</b> be able to inspect the traffic, but will be our first steps to demo without protection
+</p>
+{{% /notice %}}
 
-![Integration1](/images/integration1.png) 
+![ns_policy1](/images/ns_fallback.png)
 
-![Integration2](/images/integration2_update.png) 
+---
 
-After it you will be able to begin adding your AWS account after you click in "Add Account". There are two ways to link your account: Automatically or Manually.
+#### 3. Navigate to the AWS Console
+- Navigate to **EC2**
+- Select EC2 instance **DVWA** 
+- Copy the **Public IPv4 Address/DNS**
 
-![Integration3](/images/integration3.png) 
-
-![Integration4](/images/integration4.png) 
-
-````
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "cloudconnectorEc2",
-      "Effect": "Allow",
-      "Action": [
-        "ec2:DescribeImages",
-        "ec2:DescribeInternetGateways",
-        "ec2:DescribeInstances",
-        "ec2:DescribeNetworkInterfaces",
-        "ec2:DescribeAvailabilityZones",
-        "ec2:DescribeVpcs",
-        "ec2:DescribeRegions",
-        "ec2:DescribeNatGateways",
-        "ec2:DescribeSubnets",
-        "ec2:DescribeKeyPairs",
-        "ec2:DescribeRouteTables",
-        "ec2:DescribeSecurityGroups"
-      ],
-      "Resource": "*"
-    },
-    {
-      "Sid": "cloudconnectorIamPolicy",
-      "Effect": "Allow",
-      "Action": [
-        "iam:GetPolicyVersion",
-        "iam:GetPolicy"
-      ],
-      "Resource": "arn:aws:iam::*:policy/NetworkSecurityPolicy"
-    },
-    {
-      "Sid": "cloudconnectorIamRole",
-      "Effect": "Allow",
-      "Action": [
-        "iam:GetRole",
-        "iam:ListAttachedRolePolicies"
-      ],
-      "Resource": "arn:aws:iam::*:role/NetworkSecurityRole"
-    }
-  ]
-}
-````
-
-![Integration5](/images/integration5.png) 
-
-To link your account, be it automatically or manually, a dedicated IAM role with two custom policies will be created in order to enable Cross Account Access. To verify the IAM role and the type of access necessary to use it, click Manual setup and review the attached custom policies.
-
-![Integration6](/images/integration6.png) 
-
-![Integration8](/images/integration8.png) 
+![ns_policy1](/images/dvwa_ip.png)
 
 
-Follow the automation instructions regarding AWS setup. After selecting “Launch Stack”, you’ll be taken to your AWS Management Console and prompted to check “I acknowledge…” After a few moments, a CloudFormation Stack will be created. Upon creation, go to Outputs, copy the CloudConformityRoleArn and paste into the box on Cloud One - Conformity:
+---
 
-![Integration7](/images/integration7.png) 
+#### 4. Access the web application using the Public IP/DNS. 
+- Remember that it will be over HTTP. 
+- User: **admin**
+- Password: **password**
+- **Login**
 
-![Integration9](/images/integration9.png) 
+![ns_policy1](/images/dvwa_login.png)
 
-![Integration10](/images/integration10.png) 
+---
 
-After adding the ARN to Cloud One - Conformity click "Next". Now you have successfully added your AWS account :cloud: :smile:
+#### 5. Now that you have successfully logged in, Create/Reset Database. 
+- Click button: **Create/Reset Database**
 
-![Integration11](/images/integration11.png) 
+{{% notice note %}}
+<p style='text-align: left;'>
+After Create/Reset you will be logged out of the DVWA. Please login again using same credentials from Step 4.
+</p>
+{{% /notice %}}
 
-The Cloud One - Conformity bot will automatically kick off a scan upon completion. After the scan has completed, you have successfully set up your account.
+![ns_policy1](/images/dvwa_db_set.png)
 
-![Integration12](/images/integration12.png) 
+---
 
-Now you are all set up and you will bee able to see the results after couple minutes in the dashboard like te image below:
+#### 6. DVWA SQL Injection 
+- Select: **SQL Injection**
+- User ID: <code>admin ' OR 1=1--'</code>
 
-![Integration13](/images/integration13.png) 
+![ns_policy1](/images/sql_1.png)
+![ns_policy1](/images/sql_2.png)
+
+---
+
+#### 7. DVWA Command Injection 
+- Select: **Command Injection**
+- User ID: <code>127.0.0.1; cat /etc/passwd</code>
+
+![ns_policy1](/images/rce_1.png)
+![ns_policy1](/images/rce_2.png)
+
+---
+
+#### 8. SSH to bastion machine 
+- In the AWS Console navigate to **EC2**
+- Select EC2 instance: **BastionLinux**
+- Click **Connect**
+- Select tab: **SSH client**
+- Use the SSH Client to connect to the BastionLinux machine. 
+
+![ns_policy1](/images/ec2_bastion.png)
+![ns_policy1](/images/ssh_client.png)
+![ns_policy1](/images/ssh_shell.png)
+
+---
+
+##### 8.1 DVWA Malicious File with EICAR
+- In the **SSH shell/terminal**
+- Run Command: <code>wget http://files.trendmicro.com/products/eicar-file/eicar.com</code>
+
+![ns_policy1](/images/wget.png)
+
+
+-----
+#### Congrats you have attacked this web app. Unfortunantely all the attacks were successful. Let us fix that!! :rocket: :cloud:

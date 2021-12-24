@@ -5,7 +5,10 @@ weight: 31
 pre: "<b>4.1 </b>"
 ---
 
-Here is the base AWS environment that we will be building using CloudFormation template before deploying the Cloud One- Network Security:
+---
+
+### The base AWS environment that we will be building using CloudFormation before deploying the Cloud One- Network Security:
+
 
 ![C1NS1](/images/C1NS_AWS_enviroment.png) 
 
@@ -65,20 +68,21 @@ A Key Pair is required before continuing this CloudFormation deployment. If you 
 ![C1NS1](/images/create_env_9.png) 
 
 </details>
+<br>
 
 - **Stack Name:**  Name of your stack
 
-- **InspectionVPCCIDR:** the CIDR that you want to use for the VPC. You don't need to change it, if you don't to change the default configuration.
+- **InspectionVPCCIDR:** the CIDR that you want to use for the VPC. You don't need to change it, if you don't want to change the default configuration.
     
 - **KeyPair:** Your KeyPair name
 
 - **MyPublicIP:** Your public IP in CIDR. (e.g. 191.162.228.91/ 32 . You can grab it using a few tools or websites (https://ipinfo.io/ip). It will be use to only allow your IP to access the vulnerable application (DVWA))
 
-- **ProtectedPrivateSubnetAZ:** the AZ what you want to use to your Private subnet
+- **ProtectedPrivateSubnetAZ:** the AZ what you want to use to your Private subnet.
 
 - **ProtectedPrivateSubnetCIDR:** the CIDR that you want to use for the Private. You don't need to change it, if you don't want.
 
-- **ProtectedPublicSubnetAZ:** the AZ what you want to use to your Public subnet
+- **ProtectedPublicSubnetAZ:** the AZ what you want to use to your Public subnet.
 
 - **ProtectedPublicSubnetCIDR:** the AZ what you want to use to your Public subnet. You don't need to change it, if you don't want to.
 
@@ -118,11 +122,11 @@ Leave as fields as default and click **Next**, or optionally define tags to the 
 
 ---
 
-### 9. Ensure the stack status is **Create_Complete**. 
+### 9. Ensure the stack status has reached **Create_Complete**. 
 - Select the **Stack info** tab
 
 ![C1NS1](/images/create_env_11.png) 
 
 ---
 
-> **Now it's time for us to deploy Cloud One Network Security Appliance in AWS :cloud: :laptop: :rocket:**
+> **Now it's time for us to integrate Cloud One Network Security with AWS :cloud: :laptop: :rocket:**

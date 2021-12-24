@@ -32,7 +32,7 @@ Amazon Web Services (AWS) allows you to scale your network deployment as needed 
 
 {{% notice note %}}
 <p style='text-align: left;'>
-The CloudFormation template will create 2 new subnets for you, the Inspection and the Management subnets.
+Leave as default with the one AZ selected for this workshop.
 </p>
 {{% /notice %}}
 
@@ -89,6 +89,12 @@ After you close this screen you will <b>not</b> be able to retrieve the API Key 
 ---
 
 #### 9. Click on **Download** to get the CloudFormation template
+
+{{% notice note %}}
+<p style='text-align: left;'>
+The CloudFormation template will create 2 new subnets for you, the Inspection and the Management subnets.
+</p>
+{{% /notice %}}
 
 ![C1NS1](/images/deploy_protec_9.png) 
 
