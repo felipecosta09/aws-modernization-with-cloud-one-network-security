@@ -15,6 +15,8 @@ To do it you can read the logs in the CloudWatch service or we can create a cust
 
 > Let's create the Panel with CloudFormation :laptop: :cloud: :bar_chart:
 
+---
+
 #### 1. Navigate to the [AWS console](aws.amazon.com/) 
 - Navigate to **CloudFormation**
 - Click on **Create Stack > With new resources(standard)**
@@ -285,12 +287,17 @@ Resources:
 
 #### 4. Open a new tab and navigate to [AWS](aws.amazon.com/)
 - Navigate to **CloudWatch**
-- In left-hand menu, under Alarms click on **OK**
+- In left-hand menu, under Alarms click on **All alarms**
+- Use the search filter: **Modernization-Workshop-Network-Security-Appliance**
 - Select the **Name** of the alarm
+
+![CloudWatch10](/images/panel_details.png)
 
 ---
 
 #### 5. Copy the Alarm's **ARN** value and the **InstanceId** value.
+
+![CloudWatch10](/images/panel_values.png)
 
 ---
 
@@ -310,20 +317,29 @@ Resources:
 - Add **Tags** if desired 
 - Click on **Next**
 
+![CloudWatch10](/images/panel_tags.png)
+
 ---
 
 #### 8. Review deployment.
 - Click on **Create stack**
 
+![CloudWatch11](/images/panel_review.png)
+![CloudWatch12](/images/panel_review2.png)
+
 ---
 
-After the creation of the Stack, you can check the Panel, to check it, go to AWS Cloud Watch service and click in Dashboard
+#### 9. After the CloudWatch Panel Stack has reached Create_Complete, you can check the CloudWatch Panel.
 
-![CloudWatch12](/images/CW_Dash.png) 
+- Navigate to **CloudWatch**
+- Select **Dashboards** from left-hand menu
+- Open Dashboard: **Cloud_One_Network_Security_Panel**
+
+![CloudWatch14](/images/CW_Dash.png) 
 
 With that you can will be able to use the Dashboard to monitor the Appliance performance and also the Detection and Block statistics:
 
-![CloudWatch13](/images/cloudwatchpanel.png) 
+![CloudWatch15](/images/cloudwatchpanel.png) 
 
 
 

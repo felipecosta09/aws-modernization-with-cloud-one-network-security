@@ -1,280 +1,104 @@
 ---
-title: "Test the Protection"
+title: "Configure and Protect"
 chapter: true
 weight: 50
 pre: "<b>6. </b>"
 ---
 
-### Create a Cloud Watch Panel
+### Configuring the Policy for Cloud One Network Security 
 
-The form of consumption of logs by Cloud One Network Security takes place through third party, you can use any Syslog Server/SIEM but in this case we will use AWS Cloud Watch.
+---
 
-To do it you can read the logs in the Cloud Watch service or we can use a custom Panel in AWS Cloud Watch. For this approach we can deploy another Cloud Formation template.
+#### 1. Sign in to the [Cloud One](https://cloudone.trendmicro.com/home)
+- Select the **Network Security** tile
+- Expand **Policy** 
+- Click on **Intrusion Prevention Filtering**
 
+![ns_policy1](/images/ns_ips.png)
 
+---
 
+#### Here you will see all the available filters. As you can see we have more than 22k filters that can be applied.
+- You can use the **Search filters by properties** text box to search for specific filters.
 
+![ns_policy1](/images/ns_ips_filters.png)
 
-![CloudWatch1](/images/CF.png)
+---
 
-![CloudWatch2](/images/Create_Stack.png)
+#### 2. Apply the following IPS filters.
 
-![CloudWatch3](/images/Stack_Details.png)
+##### 2.1 Search for the filter: <code>5673: HTTP: SQL Injection (Boolean Identity)</code>
+- **Check the rule box** to assign
+- Click the **Settings Wheel** to configure rule
+- **Use customized actions**
+- Filter State: **Enabled**
+- Flow Control: **Permit**
+- Log Event: **Enabled**
+- **Save**
 
-![CloudWatch4](/images/Stack_Details.png)
+![ns_ips](/images/5673.png)
 
-![CloudWatch5](/images/Stack_Details.png)
+---
 
-![CloudWatch6](/images/Stack_Details.png)
+##### 2.2 Search for the filter: <code>3798: HTTP: SQL Injection (Boolean Identity)</code>
+- **Check the rule box** to assign
+- Click the **Settings Wheel** to configure rule
+- **Use customized actions**
+- Filter State: **Enabled**
+- Flow Control: **Permit**
+- Log Event: **Enabled**
+- **Save**
 
-![CloudWatch7](/images/Stack_Details.png)
+![ns_ips](/images/3798.png)
 
-```
-AWSTemplateFormatVersion: "2010-09-09"
-Description: Creates Cloudwatch Dashboard for Cloud One Network Security
-Parameters:
-  DashboardName:
-    Description: Insert the Name for the CloudWatch Panel
-    Type: String
-    Default: Cloud_One_Network_Security_Panel
-  AlarmInstanceID:
-    Description: Insert the Instance ID of Network Security Instance
-    Type: String
-  AlarmARN:
-    Description: Insert the ARN for the Network Security Instance Alarm
-    Type: String
-  C1NSRegion:
-    Description: Insert the Region where the Network Security Instance sits
-    Type: String
-    Default: us-east-1
-Resources:
-  BasicDashboard:
-    Type: AWS::CloudWatch::Dashboard
-    Properties:
-      DashboardName: !Ref DashboardName
-      DashboardBody:
-        Fn::Sub: '{
-              "widgets": [
-                 {
-                     "type": "alarm",
-                     "x":0,
-                     "y":0,
-                     "width": 12,
-                     "height": 3,
-                     "properties": {
-                         "alarms": [
-                           "${AlarmARN}"
-                           ],
-                         "region": [
-                           "${C1NSRegion}"
-                           ],
-                         "period": 60,
-                         "title": "Cloud One Network Security - Status"
-                     }
-                  },
-                  {
-                     "type": "metric",
-                     "x":0,
-                     "y":4,
-                     "width": 24,
-                     "height": 6,
-                     "properties": {
-                         "region":"${C1NSRegion}",
-                         "metrics": [
-                            [ "AWS/EC2", "CPUUtilization", "InstanceId", "${AlarmInstanceID}" ],
-                            [ ".", "NetworkIn", ".", "." ],
-                            [ ".", "NetworkOut", ".", "." ],
-                            [ ".", "NetworkPacketsIn", ".", "." ],
-                            [ ".", "NetworkPacketsOut", ".", "." ],
-                            [ ".", "StatusCheckFailed_System", ".", "." ],
-                            [ ".", "StatusCheckFailed_Instance", ".", "." ]
-                         ],
-                         "view": "singleValue",
-                         "period": 60,
-                         "title": "Cloud One Network Security - Statistics",
-                         "stat": "Average"
-                     }
-                  },
-                  {
-                     "type": "metric",
-                     "x":0,
-                     "y":11,
-                     "width": 14,
-                     "height": 6,
-                     "properties": {
-                         "region":"${C1NSRegion}",
-                         "metrics": [
-                            [ "AWS/EC2", "NetworkIn", "InstanceId", "${AlarmInstanceID}" ],
-                            [ ".", "NetworkOut", ".", "." ]
-                         ],
-                         "view": "timeSeries",
-                         "period": 60,
-                         "title": "Data Transfered Bytes",
-                         "stat": "Average"
-                     }
-                  },
-                  {
-                     "type": "metric",
-                     "x":16,
-                     "y":11,
-                     "width": 8,
-                     "height": 6,
-                     "properties": {
-                         "region":"${C1NSRegion}",
-                         "metrics": [
-                            [ "AWS/EC2", "NetworkIn", "InstanceId", "${AlarmInstanceID}" ],
-                            [ ".", "NetworkOut", ".", "." ]
-                         ],
-                         "view": "singleValue",
-                         "period": 60,
-                         "title": "Bytes Consumed",
-                         "stat": "Sum",
-                         "setPeriodToTimeRange": true
-                     }
-                  },
-                  {
-                     "type": "metric",
-                     "x":0,
-                     "y":18,
-                     "width": 14,
-                     "height": 6,
-                     "properties": {
-                         "region":"${C1NSRegion}",
-                         "metrics": [
-                            [ "AWS/EC2", "NetworkPacketsIn", "InstanceId", "${AlarmInstanceID}" ],
-                            [ ".", "NetworkPacketsOut", ".", "." ]
-                         ],
-                         "view": "timeSeries",
-                         "period": 60,
-                         "title": "Packets Transfered",
-                         "stat": "Average"
-                     }
-                  },
-                  {
-                     "type": "metric",
-                     "x":16,
-                     "y":18,
-                     "width": 8,
-                     "height": 6,
-                     "properties": {
-                         "region":"${C1NSRegion}",
-                         "metrics": [
-                            [ "AWS/EC2", "NetworkPacketsIn", "InstanceId", "${AlarmInstanceID}" ],
-                            [ ".", "NetworkPacketsOut", ".", "." ]
-                         ],
-                         "view": "singleValue",
-                         "period": 60,
-                         "title": "Packets Transfered",
-                         "stat": "Sum",
-                         "setPeriodToTimeRange": true
-                     }
-                  },
-                  {
-                     "type": "log",
-                     "x":0,
-                     "y":24,
-                     "width": 24,
-                     "height": 6,
-                     "properties": {
-                         "region":"${C1NSRegion}",
-                         "view": "bar",
-                         "period": 60,
-                         "title": "Cloud One Network Security - BLOCK Action",
-                         "stat": "Sum",
-                         "query": "SOURCE \u0027network_security_logs\u0027 | fields @timestamp, @message \n| sort @timestamp desc \n| limit 20 \n| filter @message like \"Block\" \n| filter @message not like \"IP Reputation\" \n| stats count() by bin(30s) "
-                     }
-                  },
-                  {
-                     "type": "log",
-                     "x":0,
-                     "y":31,
-                     "width": 24,
-                     "height": 6,
-                     "properties": {
-                         "region":"${C1NSRegion}",
-                         "view": "table",
-                         "period": 60,
-                         "title": "Cloud One Network Security - BLOCK Action",
-                         "stat": "Sum",
-                         "query": "SOURCE \u0027network_security_logs\u0027 | fields @timestamp, @message \n| sort @timestamp desc \n| limit 20 \n| filter @message like \"Block\" \n| filter @message not like \"IP Reputation\" "
-                     }
-                  },
-                  {
-                     "type": "log",
-                     "x":0,
-                     "y":38,
-                     "width": 24,
-                     "height": 6,
-                     "properties": {
-                         "region":"${C1NSRegion}",
-                         "view": "bar",
-                         "period": 60,
-                         "title": "Cloud One Network Security - PERMIT Action",
-                         "stat": "Sum",
-                         "query": "SOURCE \u0027network_security_logs\u0027 | fields @timestamp, @message \n| sort @timestamp desc \n| limit 20 \n| filter @message like \"Permit\" \n| filter @message not like \"IP Reputation\" \n| stats count() by bin(30s) "
-                     }
-                  },
-                  {
-                     "type": "log",
-                     "x":0,
-                     "y":45,
-                     "width": 24,
-                     "height": 6,
-                     "properties": {
-                         "region":"${C1NSRegion}",
-                         "view": "table",
-                         "period": 60,
-                         "title": "Cloud One Network Security - PERMIT Action",
-                         "stat": "Sum",
-                         "query": "SOURCE \u0027network_security_logs\u0027 | fields @timestamp, @message \n| sort @timestamp desc \n| limit 20 \n| filter @message like \"Permit\" \n| filter @message not like \"IP Reputation\" "
-                     }
-                  },
-                  {
-                     "type": "log",
-                     "x":0,
-                     "y":52,
-                     "width": 24,
-                     "height": 6,
-                     "properties": {
-                         "region":"${C1NSRegion}",
-                         "view": "bar",
-                         "period": 60,
-                         "title": "Cloud One Network Security - Geo BLOCK",
-                         "stat": "Sum",
-                         "query": "SOURCE \u0027network_security_logs\u0027 | fields @timestamp, @message \n| sort @timestamp desc \n| limit 20 \n| filter @message like \"Block\" \n| filter @message like \"IP Reputation\" \n| stats count() by bin(30s) "
-                     }
-                  },
-                  {
-                     "type": "log",
-                     "x":0,
-                     "y":59,
-                     "width": 24,
-                     "height": 6,
-                     "properties": {
-                         "region":"${C1NSRegion}",
-                         "view": "table",
-                         "period": 60,
-                         "title": "Cloud One Network Security - Geo BLOCK",
-                         "stat": "Sum",
-                         "query": "SOURCE \u0027network_security_logs\u0027 | fields @timestamp, @message \n| sort @timestamp desc \n| limit 20 \n| filter @message like \"Block\" \n| filter @message like \"IP Reputation\" "
-                     }
-                  }
-              ]
-          }'
-```
+---
 
-After the creation of the Stack, you can check the Panel, to check it, go to AWS Cloud Watch service and click in Dashboard
+##### 2.3 Search for the filter: <code>0361: HTTP: Protected File Access (/etc/passwd)</code>
+- **Check the rule box** to assign
+- Click the **Settings Wheel** to configure rule
+- **Use customized actions**
+- Filter State: **Enabled**
+- Flow Control: **Block**
+- Log Event: **Enabled**
+- **Save**
 
-![CloudWatch12](/images/CW_Dash.png) 
+![ns_ips](/images/0361.png)
 
-With that you can will be able to use the Dashboard to monitor the Appliance performance and also the Detection and Block statistics:
+---
 
-![CloudWatch13](/images/cloudwatchpanel.png) 
+##### 2.4 Search for the filter: <code>6763: HTTP: Wget Web Page Retrieval Attempt</code>
+- **Check the rule box** to assign
+- Click the **Settings Wheel** to configure rule
+- **Use customized actions**
+- Filter State: **Enabled**
+- Flow Control: **Block**
+- Log Event: **Enabled**
+- **Save**
+
+![ns_ips](/images/6763.png)
+
+---
+
+#### 3. Deploying the Policy.
+- In the Network Security Console select **Appliances**
+- Click on the **Group/Appliance Name**
+
+![ns_policy1](/images/ns_aplliances.png)
+![ns_policy1](/images/ns_distro_policy.png)
+
+---
+
+#### 4. On the Appliance page, click in **Distribute Policy** and wait until it distribution has finished.
+
+![ns_policy1](/images/distro_policy_start.png)
+
+---
+
+##### 4.1 Once it finish it will look like the image below.
 
 
+![ns_policy1](/images/distro_policy_finish.png)
 
 --------
 
-### Well, we just generated our first automated AWS Well-Architect Framework report from Cloud One - Conformity :star-struck: :robot: :white_check_mark: :cloud:
-
-![Report6](/images/report6.png) 
+### Congrats you have assigned filters and distributed the policy to your Network Security Appliance :star-struck: :robot: :white_check_mark: :cloud:

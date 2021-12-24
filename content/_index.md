@@ -35,7 +35,10 @@ The workshop is divided into the sections listed below. Plan on 2 hours to compl
 --------
 
 ## Learning Objectives
-- 
+- Learn how to gain centralized visibility and control, and to meet compliance requirements
+- Insert cloud network security where you need it without requiring complex cloudformation, network re-architecture, or re-IPing
+- Learn how to inspect ingress and egress traffic with a single deployment
+- Implement network layer virtual patching
 
 --------
 
@@ -52,7 +55,8 @@ The workshop is divided into the sections listed below. Plan on 2 hours to compl
 --------
 
 ### **Background knowledge for the Workshop**
-- 
+- Basic knowledge on AWS
+- Basic Security knowledge
 
 --------
 
