@@ -79,5 +79,6 @@ This topology does not inspect inbound connections.
 </p>
 {{% /notice %}}
 
+---
 
-**Awesome that you got here already :clap:, now that you understand the deployment options, let's see what resources you will need to get started with Cloud One Network Security.**
+#### Awesome that you got here already. :clap: Now that you understand the deployment options, let's see what resources you will need to get started with Cloud One Network Security.

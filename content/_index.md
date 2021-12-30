@@ -9,9 +9,9 @@ weight: 1
 ## Simplifying Network Security in the Cloud with Trend Micro - Cloud One
 ![TrendMicro](/images/logo.png)
 
-In this workshop, you’ll learn how to leverage edge protection deployment with Cloud One - Network Security provides a powerful network security layer which can be deployed seamlessly into your existing AWS architecture making it easier and more simple to apply cloud security. This technology has the goal to inspect inbound and outbound traffic, and detect and prevent malicious payloads and attacks against your application running in AWS enabling organizations to securely achieve their business goals.
+In this workshop, you’ll learn how to leverage edge protection deployment with Cloud One - Network Security to provide a powerful network security layer which can be deployed seamlessly into your existing AWS architecture making it easier and more simple to apply cloud security. This technology has the goal to inspect inbound and outbound traffic, and detect and prevent malicious payloads and attacks against your application running in AWS enabling organizations to securely achieve their business goals.
 
-Using **Trend Micro - Cloud One, AWS Internet Gateway, AWS NAT Gateway, AWS CloudWatch**, and **AWS Services**, you’ll get hands-on experience implementing an Network Security via CloudFormation to automate deployment, security and compliance workflows. 
+Using **Trend Micro - Cloud One, AWS Internet Gateway, AWS NAT Gateway, AWS CloudWatch**, and other AWS services, you’ll get hands-on experience implementing Network Security via CloudFormation to automate deployment, security and compliance workflows. 
 
 --------
 
