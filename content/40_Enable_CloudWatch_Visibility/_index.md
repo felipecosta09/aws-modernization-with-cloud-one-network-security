@@ -17,7 +17,7 @@ To do it you can read the logs in the CloudWatch service or we can create a cust
 
 ---
 
-#### 1. Navigate to the [AWS console](aws.amazon.com/) 
+#### 1. Navigate to the [AWS console](https://aws.amazon.com/) 
 - Navigate to **CloudFormation**
 - Click on **Create Stack > With new resources(standard)**
 
@@ -285,7 +285,7 @@ Resources:
 
 ---
 
-#### 4. Open a new tab and navigate to [AWS](aws.amazon.com/)
+#### 4. Open a new tab and navigate to [AWS](https://aws.amazon.com/)
 - Navigate to **CloudWatch**
 - In left-hand menu, under Alarms click on **All alarms**
 - Use the search filter: **Modernization-Workshop-Network-Security-Appliance**

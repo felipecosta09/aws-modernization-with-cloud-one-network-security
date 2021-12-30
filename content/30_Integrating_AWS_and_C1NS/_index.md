@@ -5,7 +5,9 @@ weight: 30
 pre: "<b>4. </b>"
 ---
 
-### Architecture Base for the Lab
+### Architecture for the lab
+
+---
 
 To simulate a real customer environment, we will use a pre-built CloudFormation template that will create the following resources all in the same Availibility Zone(AZ):
 

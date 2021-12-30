@@ -22,12 +22,12 @@ Amazon Web Services (AWS) allows you to scale your network deployment as needed 
 #### 2. Select the VPC that you will deploy the Network Security Appliance.
 
 - Select the **VPC** with the Internet Gateway Name: **IGW - C1NS-labenvironment**
-- Click on **Next: Select Availibility Zones**
+- Click on **Next: Select Availability Zones**
 ![C1NS1](/images/deploy_protec_2.png) 
 
 ---
 
-#### 3. Here you can select the Availibility Zone(s) that the Cloud One - Network Security Appliance will include in the deployment script. 
+#### 3. Here you can select the Availability Zone(s) that the Cloud One - Network Security Appliance will include in the deployment script. 
 - Click on **Next: Finalize Parameters** 
 
 {{% notice note %}}
@@ -171,7 +171,7 @@ The selection are the lines that I added.
 
 ---
 
-#### 11. Navigate to the [AWS Console](aws.amazon.com/)
+#### 11. Navigate to the [AWS Console](https://aws.amazon.com/)
 - Navigate to **CloudFormation**
 - Click on **Create Stack with new resources**
 

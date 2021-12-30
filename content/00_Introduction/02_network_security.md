@@ -30,4 +30,13 @@ You’ll be provided with deployment templates, pre-configured filters, and secu
 - Deploy inline within existing architecture
 - Inspect ingress and egress traffic with single deployment
 
+
+----
+
+### Overview Network Security
+
+{{< youtube id="h3SVFNdQJ70" title="Trend Micro Cloud One – Network Security® - Defense in Depth" >}}
+
+---
+
 Let's check out with more details some posible network security architectures with **Cloud One - Network Security** :cloud: :laptop: :rocket:
