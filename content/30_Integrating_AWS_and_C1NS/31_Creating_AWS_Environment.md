@@ -70,13 +70,13 @@ A Key Pair is required before continuing this CloudFormation deployment. If you 
 </details>
 <br>
 
-- **Stack Name:**  Name of your stack
+- **Stack Name:**  <code>Network-Security-Workshop</code>
 
 - **InspectionVPCCIDR:** the CIDR that you want to use for the VPC. You don't need to change it, if you don't want to change the default configuration.
     
 - **KeyPair:** Your KeyPair name
 
-- **MyPublicIP:** Your public IP in CIDR. (e.g. 191.162.228.91/ 32 . You can grab it using a few tools or websites (https://ipinfo.io/ip). It will be use to only allow your IP to access the vulnerable application (DVWA))
+- **MyPublicIP:** Your public IP in CIDR. (e.g. 191.162.228.91/32 . You can grab it using a few tools or websites (https://ipinfo.io/ip). It will be use to only allow your IP to access the vulnerable application (DVWA))
 
 - **ProtectedPrivateSubnetAZ:** the AZ what you want to use to your Private subnet.
 

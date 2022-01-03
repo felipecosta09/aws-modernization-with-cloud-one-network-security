@@ -35,10 +35,11 @@ The workshop is divided into the sections listed below. Plan on 2 hours to compl
 --------
 
 ## Learning Objectives
-- Learn how to gain centralized visibility and control, and to meet compliance requirements
-- Insert cloud network security where you need it without requiring complex cloudformation, network re-architecture, or re-IPing
-- Learn how to inspect ingress and egress traffic with a single deployment
-- Implement network layer virtual patching
+- Cloud workloads frequently require internet access, and as we know, anything accessing the internet can be breached. This workshop explores simple tactics on how to protect the internet connectivity to your AWS services and between VPCs.
+- Learning how to protect your cloud network and meet compliance requirements
+- Simplify the deployment of Network Security  and make it seamless and transparently for your organization
+- Partner confidently with your security provider: Trend Micro™ Research and Trend Micro™ Zero Day Initiative™, providing filters for Network Security customers, so you can protect, detect, and respond to threats faster and with greater knowledge.
+
 
 --------
 

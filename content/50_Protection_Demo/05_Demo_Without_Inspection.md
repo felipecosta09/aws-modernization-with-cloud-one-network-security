@@ -66,7 +66,9 @@ After Create/Reset you will be logged out of the DVWA. Please login again using 
 
 #### 6. DVWA SQL Injection 
 - Select: **SQL Injection**
-- User ID: <code>admin ' OR 1=1--'</code>
+- User ID: 
+    
+        admin ' OR 1=1--'
 
 ![ns_policy1](/images/sql_1.png)
 ![ns_policy1](/images/sql_2.png)
@@ -95,7 +97,7 @@ After Create/Reset you will be logged out of the DVWA. Please login again using 
 
 ---
 
-##### 8.1 DVWA Malicious File with EICAR
+##### 8.1 Wget Retrieval Attempt - Download Files 
 - In the **SSH shell/terminal**
 - Run Command: <code>wget http://files.trendmicro.com/products/eicar-file/eicar.com</code>
 

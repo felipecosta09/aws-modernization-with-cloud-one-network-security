@@ -49,12 +49,16 @@ pre: "<b>6.2 </b>"
 
 #### 5. DVWA SQL Injection
 - Select: **SQL Injection**
-- User ID: <code>admin ' OR 1=1--'</code>
+- User ID:
+
+        admin ' OR 1=1--'
 
 ![ns_policy1](/images/sql_1.png)
 ![ns_policy1](/images/sql_2.png)
 
-##### 5.1 Remember we configured the SQL Injection filters to **Permit**, if you want to you can change it to Block. Let's check our CloudWatch dashboard for the SQL event.
+---
+
+#### 5.1 Remember we configured the SQL Injection filters to **Permit**, if you want to you can change it to Block. Let's check our CloudWatch dashboard for the SQL event.
 
 {{% notice note %}}
 <p style='text-align: left;'>
@@ -78,11 +82,11 @@ If you decide to change this intrusion prevention filter from permit to <b>BLOCK
 
 ![ns_policy1](/images/rce_1.png)
 
-##### 6.1 Remember we configured the Command Injection filter to **Block**, so instead of the attack being permitted a timeout occurs. 
+#### 6.1 Remember we configured the Command Injection filter to **Block**, so instead of the attack being permitted a timeout will occur. 
 
 ![ns_policy1](/images/timeout.png)
 
-##### 6.2 Let's check our CloudWatch dashboard for the RCE event.
+#### 6.2 Let's check our CloudWatch dashboard for the RCE event.
 - In AWS Console navigate to **CloudWatch**
 - From the left-hand menu select **Dashboards**
 - Select: **Cloud_One_Network_Security_Panel**
@@ -105,16 +109,16 @@ If you decide to change this intrusion prevention filter from permit to <b>BLOCK
 
 ---
 
-##### 7.1 DVWA Malicious File with EICAR
+#### 7.1 Wget Retrieval Attempt - Download Files 
 - In the **SSH shell/terminal**
 - Run Command: <code>wget http://files.trendmicro.com/products/eicar-file/eicar.com</code>
 
-##### 7.1 Remember we configured the intrusion prevention filter to **Block**, so instead of the file being permitted the Network Security Appliance dops the package and another timeout will occur. 
+#### 7.1 Remember we configured the intrusion prevention filter to **Block**, so instead of the file being permitted the Network Security Appliance drops the file attempt and another timeout will occur. 
 
 ![ns_policy1](/images/timeout_mfu.png)
 
 
-##### 6.2 Let's check our CloudWatch dashboard for the RCE event.
+#### 7.2 Let's check our CloudWatch dashboard for Wget Retrieval Attempt - Download File
 - In AWS Console navigate to **CloudWatch**
 - From the left-hand menu select **Dashboards**
 - Select: **Cloud_One_Network_Security_Panel**

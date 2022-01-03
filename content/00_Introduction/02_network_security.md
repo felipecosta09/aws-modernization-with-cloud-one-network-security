@@ -1,5 +1,5 @@
 ---
-title: "Cloud One Network Security"
+title: "Cloud One - Network Security"
 chapter: false
 weight: 7
 ---
