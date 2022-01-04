@@ -1,13 +1,12 @@
-# AWS NETWORK SECURITY WITH TREND MICRO
+# AWS WORKLOAD SECURITY WITH TREND MICRO
 
-Welcome to the AWS Network Security with Trend Micro hands-on workshop.
+Welcome to the AWS Workload Security with Trend Micro hands-on workshop.
 
-In this workshop, you will learn how to protect your network in your AWS environment using Trend Micro Cloud One Network Security.
+In this workshop, you will learn how to protect your workloads in your AWS environment using Trend Micro Cloud One Workload Security.
 
-Using Trend Micro - Cloud One, AWS VPC, AWS ELB, AWS EC2, AWS CloudWatch and AWS Cloud Formation, you’ll get hands-on experience implementing an automated Cloud Formation security stack to provide Network Security capabilities to your Amazon VPC Network.
 
 ## Learning Objectives
-The learning objectives of this workshop is to familiarize users with the deployment, configuration, and usage of the Trend Micro - Cloud One - Network Security.
+The learning objectives of this workshop is to familiarize users with the deployment, configuration, and usage of the Trend Micro - Cloud One - Workload Security.
 
 ## Expected Duration:
 - 1 Hour

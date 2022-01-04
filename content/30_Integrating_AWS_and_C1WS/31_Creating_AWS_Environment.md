@@ -7,24 +7,11 @@ pre: "<b>4.1 </b>"
 
 ---
 
-### The base AWS environment that we will be building using CloudFormation before deploying the Cloud One- Network Security:
-
-
-![C1NS1](/images/C1NS_AWS_enviroment.png) 
-
-{{% notice note %}}
-<p style='text-align: left;'>
-In this example you don't need to create the Inspection and Management subnet because the CloudFormation template suggested by the Cloud One - Network Security will create it for you.
-</p>
-{{% /notice %}}
-
-----
-
 ## 1. Creating the base AWS environment using AWS CloudFormation Template
 
 You can use the CloudFormation template below to create the infrastructure in same AZ with the 2 subnets, NAT Gateway, Internet Gateway, and the EC2 instances.
 
-**Download** -> [CloudFormation Template](/cft/CFT_Network_Security_Workshop.yml)
+**Download** -> [CloudFormation Template](/cft/CFT_Workload_Security_Workshop.yml)
 
 ---
 
@@ -129,4 +116,4 @@ Leave as fields as default and click **Next**, or optionally define tags to the 
 
 ---
 
-> **Now it's time for us to integrate Cloud One Network Security with AWS :cloud: :laptop: :rocket:**
+> **Now it's time for us to integrate Cloud One Workload Security with AWS :cloud: :laptop: :rocket:**

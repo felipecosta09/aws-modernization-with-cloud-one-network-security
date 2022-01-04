@@ -1,5 +1,5 @@
 ---
-title: "Deploy Cloud One - Network Security"
+title: "Deploy Cloud One - Workload Security"
 chapter: false
 weight: 30
 pre: "<b>4. </b>"
@@ -13,10 +13,9 @@ To simulate a real customer environment, we will use a pre-built CloudFormation 
 - 1 - NAT Gateway
 - 1 - Internet Gateway
 - 5 - EC2 instances
-- 1 - Cloud One - Network Security Instance
 
-As a recommended deployment method in the Cloud One - Network Security documentation, we will use the follow topology on the AWS environment for our lab.
+We will use the follow topology on the AWS environment for our lab.
 
-![Edge_Deployment](/images/C1NS_Edge_Deployment.png) 
+![base](/images/C1NS_AWS_enviroment.png) 
 
 

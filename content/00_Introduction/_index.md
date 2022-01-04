@@ -5,67 +5,46 @@ weight: 5
 pre: "<b>1. </b>"
 ---
 
-## SECURE THE CLOUD WITHOUT GIVING UP THE BENEFITS
-As more and more enterprises adopt multi- or hybrid cloud strategies, cloud architects and network security teams are struggling to protect business-critical assets across their many different cloud environments. They’re finding that what worked on-premises for security doesn’t necessarily translate to the cloud.
+## How the Hybrid Cloud Changes the Game for Security
 
 ---
 
-### A challenge to deploy
+Organizations today are facing significant challenges as they adopt the latest technologies to power business
+success. With major shifts from physical, to virtual, to cloud having occurred in the past 10 years, architectures
+have changed significantly and the rate of change is not slowing down. Technologies like containers and serverless
+functions are already on the horizon for broad enterprise adoption, adding a new set challenges for security teams.
 
-Many existing network security solutions are painful to deploy because they’re not designed for the cloud. Some require extensive downtime to be inserted inline, some have outdated throughput-based licensing models, and others may be impossible to deploy within an enterprise’s existing
-cloud infrastructure. For example, agent/host-based solutions aren’t always feasible or desirable with the cloud. Enterprises may not have the right
-to deploy an agent on their cloud provider’s virtual server—or may not want to dedicate compute to an agent at the expense of other workloads.
-There’s also the problem of complexity. An overwhelming number of appliances, load balancers, and other “moving parts” have to be installed and
-managed to inspect inbound and outbound traffic. If every virtual public cloud (VPC) needs its own firewall—and if an enterprise has hundreds of
-VPCs—the management burden and costs quickly add up.
+At the center of this technology shift are servers, the workhorse of the enterprise. Gartner, the leading IT research
+and advisory firm, explicitly points out that, “Servers often host the most critical data in the enterprise and have
+different functionality than client endpoints.”3 The challenge is that the architectural shifts have established server
+workloads in multiple locations and in different formats, which makes securing them more complex than ever before.
 
-Changes often have to be made to the network infrastructure itself to accommodate those additional components, with some security solutions
-requiring IP addresses to be changed or specific topologies to be deployed. New devices inserted in the network can also become “critical” going
-forward, meaning they can’t be easily (or cheaply) removed or modified. As more pieces get added, they bring inefficiencies that can disrupt or
-slow down network traffic, affecting core business operations and processes.
+### WHAT IS THE HYBRID CLOUD?
+The speed of change in IT architectures over the past decade is unprecedented. The introduction of virtualization
+technologies from companies like VMware took the deployment of servers from weeks to days, changing the
+way data center operations and security teams worked, and resetting expectations of speed for business project
+delivery. Only a few years later, the public cloud market, driven by offerings like AWS and Azure, enabled the
+deployment of servers in minutes instead of days, empowering businesses to deliver new applications and projects
+at speeds that have never been seen before. With new technologies like containers, Docker and “serverless”
+offerings like AWS Lambda or Azure functions, the rate of change for IT is not showing any signs of slowing down
 
-There are cloud-native security solutions, of course, but these are often tied to specific platforms, such as Amazon Web Services (AWS). Having a different security solution for every cloud provider prevents enterprises from getting a centralized view of the threats they face.
-It also increases the risks of management dashboard/console overload, increasing the odds that important security alerts will be missed. These
-platform-specific cloud solutions also tend to lack key security features, such as virtual patching at the network layer, egress filtering, and deep
-packet inspection.
+![Introduction](/images/evolution.png)
 
-![Introducation](/images/intro.png)
+
+With such rapid change, the ability for an organization to simply abandon existing deployments in favor of the latest technology is severely limited. The result is that most organizations will have an IT architecture that spans multiple deployment environments, with new projects embracing the most modern approaches, but running projects that continue to operate within their existing environments. This concept is what underpins the use of “hybrid cloud” when describing modern IT. Hybrid cloud includes a mix of on-premises, private cloud and public cloud services with orchestration between the environments. In this model, organizations can allow workloads to move between environments as computing needs and costs change, giving businesses greater flexibility, more deployment options, and increased opportunity for cost savings.
 
 ---
 
-## Network Policies to Help Reduce Risk and Improve Security
+### SECURING THE HYBRID CLOUD
+The challenge of the hybrid cloud is that each environment requires different approaches to the way that security
+is applied. The good news is that security strategies like defense in-depth remain relevant across all environments;
+it’s how they are applied in ways that are both effective and operationally efficient that change. For example, for
+infrastructure-as-a-service (IaaS) deployments, there is a shared security responsibility, with the CSP responsible
+for everything up-to-and-including the hypervisor layer, and organizations responsible for everything they put in
+the cloud.
 
->*Cloud workloads frequently require internet access, and as we know, anything accessing the internet can be breached. This article explores simple tactics such as access level restriction and overlaying threat intelligence to enhance your security posture.*
+![Introduction](/images/shared_resp_model.png)
 
+It is important to remember that every workload in the data center, the cloud, or in a container, has a different level of risk, which means a wide range of capabilities need to be available to appropriately protect instead of a one-size fits all approach. While having many security capabilities in a single product will help with this risk-based approach, they are only applicable if those capabilities help organizations solve real-world security challenges.
 
-Most cloud practitioners start their network control journey looking at security groups, firewalls, or web application firewalls (WAF) to protect their public applications from inbound attacks.  But what about workloads that aren’t public facing but still have internet access?
-
-For example, this Amazon Elastic Compute Cloud (EC2) Linux workload can be infiltrated by Kinsingpunk Malware to steal Amazon Web Services (AWS) credentials, Secure Shell (SSH) keys, and bash history file, among other types of credentials and information. Collected data is then sent to the remote server **sayhi.bplaced[.]net**
-
-Considering that malware uses techniques to rapidly change these domains, chasing malicious domains one at a time, is difficult, if not impossible, to react to.  In this attack, restricting internet traffic to only known, good domains would have prevented the exfiltration to **sayhi.bplaced[.]net**
-
-Reasons like this are in part why frameworks like PCI DSS (Section 1.2.1) make this proactive and powerful security control a requirement.
-
-With cloud providers introducing new networking technologies, it’s important to use a transparent, threat-focused security solution like Trend Micro Cloud One™ – Network Security. This solution can be implemented next to the internet gateway to achieve these goals.  With a multi-cloud approach, these benefits can be made available to any compute service in your VPC or VNet communicating via an internet gateway.
-
-> <h4>Now… overlay threat context to supercharge your automation and response:</h4>
-
-Ok, so now that unsanctioned internet communications are prevented, what’s next to maximize security and minimize risk?
-
-Looking at what threats were blocked can determine the appropriate response.  Overlaying threat intelligence provides powerful context to differentiate between an application issue or a security issue.
-
-For instance, a workload reaching out to **example.com** may simply indicate the need for a policy change or be from incomplete code that inadvertently made it to production.  While this needs to be addressed, it likely doesn’t warrant immediate concern. Therefore, responding with automation to create an issue or to inform the app owner of this violation may be all that is needed.
-
-What about a blocked attempt to reach out to known command and control (C&C)?  Or communications attempt to an anonymous proxy or suspicious geo-region?  Or a network inspection that blocks a known malware check-in?  This response may be significantly different—like automation that terminates or quarantines the affected code, notifying your security operations center (SOC), and possibly initiating incident response activities.
-
-This security context provided from solutions like Network Security allow for a better response and now you can rest easy knowing that even approved internet-bound traffic to the specified known, good domains will be further analyzed for signs of malicious activity, exfiltration attempts, and other compromises.
-
---- 
-
-<h4>On Architecture:</h4>
-
-Implementing Network Security at your application’s internet gateway is a great way for DevOps teams to add protection.  For cloud architects, patterns that share security and network infrastructure can scale this compliance and security control.  This can then provide a security best practice guardrail that can be rapidly used across your organization by many teams.
-
-Common patterns include, sharing a centrally managed network control using AWS technologies like Gateway Load Balancer (GWLB) or architecting a hub-and-spoke network topology with a shared internet egress point—providing a great location to deploy a control for multiple teams.
-
-![Introducation](/images/intro_2.png)
+---

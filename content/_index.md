@@ -6,12 +6,14 @@ weight: 1
 
 # WELCOME!
 
-## Simplifying Network Security in the Cloud with Trend Micro - Cloud One
+## Streamline Security Operations and Management with Trend Micro - Cloud One
 ![TrendMicro](/images/logo.png)
 
-In this workshop, you’ll learn how to leverage edge protection deployment with Cloud One - Network Security provides a powerful network security layer which can be deployed seamlessly into your existing AWS architecture making it easier and more simple to apply cloud security. This technology has the goal to inspect inbound and outbound traffic, and detect and prevent malicious payloads and attacks against your application running in AWS enabling organizations to securely achieve their business goals.
+In this workshop, you’ll learn how to leverage Cloud One - Workload Security to enforce the detection and protection policy
+(application control, anti-malware, IPS, firewall, integrity monitoring, and log inspection)
+via a small software component deployed on the server or VM being protected.
 
-Using **Trend Micro - Cloud One, AWS Internet Gateway, AWS NAT Gateway, AWS CloudWatch**, and **AWS Services**, you’ll get hands-on experience implementing an Network Security via CloudFormation to automate deployment, security and compliance workflows. 
+Using **Trend Micro - Cloud One Workload Security** you will learn how to automate security deployment and protect workloads no matter their location.
 
 --------
 
@@ -22,11 +24,11 @@ The workshop is divided into the sections listed below. Plan on 2 hours to compl
 
 <span style="color: #4e3eb1;"><i class='fas fa-check fa-xs'></i></span> <b> 1. Introduction - (10 minutes)</b> 
 
-<span style="color: #4e3eb1;"><i class='fas fa-check fa-xs'></i></span> <b> 2. Networking Security Architectures (15 minutes)</b> 
+<span style="color: #4e3eb1;"><i class='fas fa-check fa-xs'></i></span> <b> 2. Workload Security Protection (15 minutes)</b> 
 
 <span style="color: #4e3eb1;"><i class='fas fa-check fa-xs'></i></span> <b> 3. Prerequisites (15 minutes)</b>
 
-<span style="color: #4e3eb1;"><i class='fas fa-check fa-xs'></i></span> <b> 4. Deploying Network Security (60 minutes)</b>
+<span style="color: #4e3eb1;"><i class='fas fa-check fa-xs'></i></span> <b> 4. Deploying Workload Security (60 minutes)</b>
 
 <span style="color: #4e3eb1;"><i class='fas fa-check fa-xs'></i></span> <b> 5. Testing Security Features (15 minutes)</b>
 
@@ -36,9 +38,9 @@ The workshop is divided into the sections listed below. Plan on 2 hours to compl
 
 ## Learning Objectives
 - Learn how to gain centralized visibility and control, and to meet compliance requirements
-- Insert cloud network security where you need it without requiring complex cloudformation, network re-architecture, or re-IPing
-- Learn how to inspect ingress and egress traffic with a single deployment
-- Implement network layer virtual patching
+- Proactively defend against network threats with intrusion prevention and firewall
+- Protect against vulnerabilities with virtual patching
+- Easily bake security into your cloud environment
 
 --------
 

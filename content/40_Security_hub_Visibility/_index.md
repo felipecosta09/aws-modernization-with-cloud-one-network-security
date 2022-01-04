@@ -1,11 +1,11 @@
 ---
-title: "Enable CloudWatch Visibility"
+title: "AWS Security Hub"
 chapter: true
 weight: 40
 pre: "<b>5. </b>"
 ---
 
-# Enable CloudWatch Visibility
+# Enable event forwarding to AWS Security Hub
 
 ### Create an Amazon CloudWatch Panel
 
