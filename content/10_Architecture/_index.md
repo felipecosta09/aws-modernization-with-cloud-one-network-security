@@ -17,7 +17,7 @@ The arrows in the images indicate the flow of network traffic through the VPCs a
 
 #### Option 1 - Edge Protection Deployment
 
-This deployment is designed to protect servers that primarily receive connections from the internet, is best suited to environments that require the following:
+This deployment is designed to protect servers that primarily receive connections from the internet and is best suited to environments that require the following:
 
 * A simple network design that protects web servers.
 * Deployment of multiple virtual appliances.
