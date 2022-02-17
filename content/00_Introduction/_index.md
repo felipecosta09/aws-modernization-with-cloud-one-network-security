@@ -29,7 +29,7 @@ It also increases the risks of management dashboard/console overload, increasing
 platform-specific cloud solutions also tend to lack key security features, such as virtual patching at the network layer, egress filtering, and deep
 packet inspection.
 
-![Introducation](/images/intro.png)
+![Introduction](/images/intro.png)
 
 ---
 
@@ -68,4 +68,4 @@ Implementing Network Security at your application’s internet gateway is a grea
 
 Common patterns include, sharing a centrally managed network control using AWS technologies like Gateway Load Balancer (GWLB) or architecting a hub-and-spoke network topology with a shared internet egress point—providing a great location to deploy a control for multiple teams.
 
-![Introducation](/images/intro_2.png)
+![Introduction](/images/intro_2.png)

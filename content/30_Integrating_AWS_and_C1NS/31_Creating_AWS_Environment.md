@@ -96,7 +96,7 @@ A Key Pair is required before continuing this CloudFormation deployment. If you 
 
 ### 6. Configure stack options
 
-Leave as fields as default and click **Next**, or optionally define tags to the evironment if desired.
+Leave as fields as default and click **Next**, or optionally define tags to the environment if desired.
 
 ![C1NS1](/images/create_env_5.png) 
 

@@ -39,4 +39,4 @@ You’ll be provided with deployment templates, pre-configured filters, and secu
 
 ---
 
-Let's check out with more details some posible network security architectures with **Cloud One - Network Security** :cloud: :laptop: :rocket:
+Let's check out with more details some possible network security architectures with **Cloud One - Network Security** :cloud: :laptop: :rocket:

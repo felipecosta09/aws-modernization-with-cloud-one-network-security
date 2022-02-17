@@ -41,7 +41,7 @@ Leave as default with the one AZ selected for this workshop.
 ---
 
 #### 4. **Generate a new API Key**
-- Cick on **Generate a new API Key** to be redirected to the account management page shown below in step 5 
+- Click on **Generate a new API Key** to be redirected to the account management page shown below in step 5 
 
 ![C1NS1](/images/deploy_protec_ssh.png) 
 
@@ -218,4 +218,4 @@ The selection are the lines that I added.
 ![C1NS1](/images/deploy_protec_20.png) 
 
 ---
-> **Et voila, we just generated completed the deployment of the Cloud One - Network Security Appliance in our AWS enviornment** 🤩 :cloud: 🤖 :rocket:
+> **Et voila, we just generated completed the deployment of the Cloud One - Network Security Appliance in our AWS environment** 🤩 :cloud: 🤖 :rocket:
