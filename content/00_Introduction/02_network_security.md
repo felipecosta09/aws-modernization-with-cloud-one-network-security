@@ -35,7 +35,7 @@ You’ll be provided with deployment templates, pre-configured filters, and secu
 
 ### Overview Network Security
 
-{{< youtube id="h3SVFNdQJ70" title="Trend Micro Cloud One – Network Security® - Defense in Depth" >}}
+{{< youtube id="NhnF4NBX3TE" title="Trend Micro Cloud One – Network Security® - Defense in Depth" >}}
 
 ---
 
