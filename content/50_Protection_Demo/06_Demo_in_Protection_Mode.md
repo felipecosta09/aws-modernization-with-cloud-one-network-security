@@ -62,7 +62,7 @@ pre: "<b>6.2 </b>"
 
 {{% notice note %}}
 <p style='text-align: left;'>
-If you decide to change this intrusion prevention filter from permit to <b>BLOCK</b> you will need to redistibute the policy before it will take effect.
+If you decide to change this intrusion prevention filter from permit to <b>BLOCK</b> you will need to redistribute the policy before it will take effect.
 </p>
 {{% /notice %}}
 

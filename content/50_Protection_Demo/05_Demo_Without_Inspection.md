@@ -105,4 +105,4 @@ After Create/Reset you will be logged out of the DVWA. Please login again using 
 
 
 -----
-#### Congrats you have attacked this web app. Unfortunantely all the attacks were successful. Let us fix that!! :rocket: :cloud:
+#### Congrats you have attacked this web app. Unfortunately all the attacks were successful. Let us fix that!! :rocket: :cloud:
