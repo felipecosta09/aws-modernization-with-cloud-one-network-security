@@ -9,7 +9,7 @@ pre: "<b>4. </b>"
 
 ---
 
-To simulate a real customer environment, we will use a pre-built CloudFormation template that will create the following resources all in the same Availibility Zone(AZ):
+To simulate a real customer environment, we will use a pre-built CloudFormation template that will create the following resources all in the same Availibility Zone (AZ):
 
 - 2 - Subnets
 - 1 - NAT Gateway
