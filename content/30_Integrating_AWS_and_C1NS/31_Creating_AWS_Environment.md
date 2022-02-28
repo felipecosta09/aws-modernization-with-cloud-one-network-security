@@ -21,7 +21,7 @@ You can use the CloudFormation template below to create the infrastructure in sa
 
 {{% notice note %}}
 <p style='text-align: left;'>
-In this example you don't need to create the Inspection and Management subnet because the CloudFormation template suggested by the Cloud One - Network Security will create it for you.
+In this example, you don't need to create the Inspection and Management subnets because the CloudFormation template suggested by the Cloud One - Network Security documentation will create them for you.
 </p>
 {{% /notice %}}
 
@@ -44,7 +44,7 @@ In this example you don't need to create the Inspection and Management subnet be
 
 - Select the option to **Upload a template file**
 - Click on **Choose the File** 
-- Select the CloudFormation template that you downloaded in the step(1) from this page 
+- Select the CloudFormation template that you downloaded in Step 1 above.
 - Click on **Next**
 
 ![C1NS1](/images/create_env_3.png) 

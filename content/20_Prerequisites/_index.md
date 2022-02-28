@@ -51,7 +51,7 @@ We have two ways to help customers with Free trial:
 - **6.** Fill up the form details and click Sign Up.
 ![C1C](/images/c1c_1.png)
 
-- **7.** After you will see a message about your Sign Up in Cloud One.
+- **7.** You should now see a message directing you to verify your email address.
 ![C1C](/images/c1c_2.png)
 
 - **8.** Go to your mailbox from the email that you used to register in Cloud One and verify your registration from Cloud One. The email will look like the below example, you will just need to click Verify Email.
@@ -80,7 +80,7 @@ We have two ways to help customers with Free trial:
 **1.** Go to [Register for a free trial](https://cloudone.trendmicro.com/register), fill-up the form details and click Sign Up.
 ![C1C](/images/c1c_1.png)
 
-**2.** After you will see a message about your Sign Up in Cloud One.
+**2.** You should now see a message directing you to verify your email address.
 
 ![C1C](/images/c1c_2.png)
 

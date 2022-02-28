@@ -9,16 +9,15 @@ weight: 1
 ## Simplifying Network Security in the Cloud with Trend Micro - Cloud One
 ![TrendMicro](/images/logo.png)
 
-In this workshop, you’ll learn how to leverage edge protection deployment with Cloud One - Network Security to provide a powerful network security layer which can be deployed seamlessly into your existing AWS architecture making it easier and more simple to apply cloud security. This technology has the goal to inspect inbound and outbound traffic, and detect and prevent malicious payloads and attacks against your application running in AWS enabling organizations to securely achieve their business goals.
+In this workshop, you’ll learn how to leverage edge protection deployment with Cloud One - Network Security to provide a powerful network security layer which can be deployed seamlessly into your existing AWS architecture, making it easier and simpler to apply cloud security. This technology inspects inbound and outbound traffic, detecting and preventing malicious payloads and attacks against your application running in AWS, and enabling organizations to securely achieve their business goals.
 
 Using **Trend Micro - Cloud One, AWS Internet Gateway, AWS NAT Gateway, AWS CloudWatch**, and other AWS services, you’ll get hands-on experience implementing Network Security via CloudFormation to automate deployment, security and compliance workflows. 
 
 --------
 
-## Workshop structure Agenda 
+## Workshop Structure
 
-The workshop is divided into the sections listed below. Plan on 2 hours to complete the full workshop.
-
+The workshop is divided into the sections listed below. Plan on setting aside 2 hours to complete the full workshop.
 
 <span style="color: #4e3eb1;"><i class='fas fa-check fa-xs'></i></span> <b> 1. Introduction - (10 minutes)</b> 
 
@@ -35,10 +34,10 @@ The workshop is divided into the sections listed below. Plan on 2 hours to compl
 --------
 
 ## Learning Objectives
-- Cloud workloads frequently require internet access, and as we know, anything accessing the internet can be breached. This workshop explores simple tactics on how to protect the internet connectivity to your AWS services and between VPCs.
-- Learning how to protect your cloud network and meet compliance requirements
-- Simplify the deployment of Network Security  and make it seamless and transparently for your organization
-- Partner confidently with your security provider: Trend Micro™ Research and Trend Micro™ Zero Day Initiative™, providing filters for Network Security customers, so you can protect, detect, and respond to threats faster and with greater knowledge.
+- Cloud workloads frequently require internet access and, as we know, anything accessing the internet can be breached. This workshop explores simple tactics that can be used to protect internet connections to your AWS services and connections between VPCs.
+- Learn how to protect your cloud network and meet compliance requirements
+- Simplify the deployment of Network Security, while making it seamless and transparent for your organization
+- Partner confidently with your security provider: Trend Micro™ Research and Trend Micro™ Zero Day Initiative™, who directly provide filters for Network Security customers, so you can protect, detect, and respond to threats faster and with greater knowledge.
 
 
 --------
@@ -47,17 +46,17 @@ The workshop is divided into the sections listed below. Plan on 2 hours to compl
 - DevOps Engineers
 - Cloud Architects
 - Solution Architects
-- Network Security Analyst 
-- Network Security Architect
-- Information Security
+- Network Security Analysts
+- Network Security Architects
+- Information Security teams
 - GRC teams
-- Tech leads and Program Managers (PM)
+- Tech Leads and Program Managers (PM)
 
 --------
 
 ### **Background knowledge for the Workshop**
-- Basic knowledge on AWS
-- Basic Security knowledge
+- Basic knowledge of AWS
+- Basic security knowledge
 
 --------
 
