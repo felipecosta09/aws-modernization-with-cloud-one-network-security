@@ -6,7 +6,7 @@ pre: "<b>1. </b>"
 ---
 
 ## SECURE THE CLOUD WITHOUT GIVING UP THE BENEFITS
-As more and more enterprises adopt multi- or hybrid-cloud strategies, cloud architects and network security teams are struggling to protect business-critical assets across their many different cloud environments. They’re finding that what worked on-premise for security doesn’t necessarily translate to the cloud.
+As more and more enterprises adopt multi- or hybrid-cloud strategies, cloud architects and network security teams are looking for simpler ways to protect business-critical assets across their many different cloud environments. They’re finding that what worked on-premise for security doesn’t necessarily translate to the cloud.
 
 ---
 
@@ -16,7 +16,7 @@ Many existing network security solutions are painful to deploy because they’re
 cloud infrastructure. For example, agent/host-based solutions aren’t always feasible or desirable in the cloud. Enterprises may not have the right
 to deploy an agent on their cloud provider’s virtual server—or may not want to dedicate compute to an agent at the expense of other workloads.
 There’s also the problem of complexity. An overwhelming number of appliances, load balancers, and other “moving parts” have to be installed and
-managed to inspect inbound and outbound traffic. If every virtual public cloud (VPC) needs its own firewall—and if an enterprise has hundreds of
+managed to inspect inbound and outbound traffic. If every Virtual Private Cloud (VPC) needs its own firewall—and if an enterprise has hundreds of
 VPCs—the management burden and costs quickly add up.
 
 Changes often have to be made to the network infrastructure itself to accommodate those additional components, with some security solutions
@@ -25,9 +25,7 @@ forward, meaning they can’t be easily (or cheaply) removed or modified. As mor
 slow down network traffic, affecting core business operations and processes.
 
 There are cloud-native security solutions, of course, but these are often tied to specific platforms, such as Amazon Web Services (AWS). Having a different security solution for every cloud provider prevents enterprises from getting a centralized view of the threats they face.
-It also increases the risks of management dashboard/console overload, increasing the odds that important security alerts will be missed. These
-platform-specific cloud solutions also tend to lack key security features, such as virtual patching at the network layer, egress filtering, and deep
-packet inspection.
+It also increases the risks of management dashboard/console overload, increasing the odds that important security alerts will be missed. These platform-specific cloud solutions may not address all security use cases, such as virtual patching at the network layer, egress filtering, and deep packet inspection.
 
 ![Introduction](/images/intro.png)
 
