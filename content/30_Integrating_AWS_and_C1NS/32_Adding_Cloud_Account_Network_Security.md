@@ -172,33 +172,29 @@ After doing the processes describe in the Cloud One console you will need to pas
 
 ---
 
-#### 4.4 Optional - Add Tags
-- Click on **Next: Review** 
+#### 4.4 Add the Role Name and (Optional - Add Tags)
+- **Role Name**: <code>NetworkSecurityRole</code>
+- Click on **Create Role**
 
 ![C1NS1](/images/create_net_sec_10.png) 
 
----
-
-#### 4.5 Add the Role Name
-- **Role Name**: <code>NetworkSecurityRole</code>
-- Click on **Create Role**
 ![C1NS1](/images/create_net_sec_11.png)
 
 ---
 
-#### 4.6 After you successfully created the Role. 
+#### 4.5 After you successfully created the Role. 
 - Search for the name of the role: <code>NetworkSecurityRole</code>
 - Click on the **Role Name**
 ![C1NS1](/images/create_net_sec_12.png)
 
 ---
 
-#### 4.7 Copy the Role ARN and navigate back to the Cloud One - Network Security console
+#### 4.6 Copy the Role ARN and navigate back to the Cloud One - Network Security console
 ![C1NS1](/images/create_net_sec_13.png) 
 
 ---
 
-#### 4.8 Paste the Role ARN 
+#### 4.7 Paste the Role ARN 
 - Click on **Create Account Name**
 ![C1NS1](/images/create_net_sec_6.png) 
 

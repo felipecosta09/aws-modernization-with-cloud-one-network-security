@@ -40,55 +40,23 @@ Leave as default with the one AZ selected for this workshop.
 
 ---
 
-#### 4. **Generate a new API Key**
-- Click on **Generate a new API Key** to be redirected to the account management page shown below in step 5 
+#### 4. Verify Network Asset
+This steo verifies that the selected network asset can support dep ovment for the Network Securitv virtual appliance.
+- Click on **Next: Finalize Parameters** 
 
-![C1NS1](/images/deploy_protec_ssh.png) 
-
----
-
-- Select your **Account**
-- Click on **Go**
 ![C1NS1](/images/deploy_protec_4.png) 
 
 ---
 
-#### 5. Click on **New** to create the API Key
-
-![C1NS1](/images/deploy_protec_5.png) 
-
----
-
-#### 6. Configure API Key details.
-- Role: **Full Access Role** 
-- Language: **English**
-- Timezone: **America/Chicago**
-- Click on **Next**
-
-![C1NS1](/images/deploy_protec_6.png)
-
----
-
-#### 7. Copy the API Key to a Clipboard. 
-{{% notice note %}}
-<p style='text-align: left;'>
-After you close this screen you will <b>not</b> be able to retrieve the API Key later.
-</p>
-{{% /notice%}}
-
-![C1NS1](/images/deploy_protec_7.png) 
-
----
-
-#### 8. In the Cloud One - Network Security wizard.
-- Paste in the API key
+#### 5. Finalize parameters
+- Select the SSH Key Pair that we created before for this workshop
 - Click on **Next: Use Deployment Script**
 
-![C1NS1](/images/deploy_protec_ssh.png)
+![C1NS1](/images/deploy_protec_5.png)
 
 ---
 
-#### 9. Click on **Download** to get the CloudFormation template
+#### 6. Click on **Download** to get the CloudFormation template
 
 {{% notice note %}}
 <p style='text-align: left;'>
@@ -96,29 +64,29 @@ The CloudFormation template will create 2 new subnets for you, the Inspection an
 </p>
 {{% /notice %}}
 
-![C1NS1](/images/deploy_protec_9.png) 
+![C1NS1](/images/deploy_protec_6.png) 
 
 ---
 
-#### 10. Edit the CloudFormation template (deploymentScript.yaml) downloaded previously from Cloud One console. 
+#### 7. Edit the CloudFormation template (deploymentScript.yaml) downloaded previously from Cloud One console. 
 
 You can use any text editor or IDE. In our example we are using [Visual Studio Code](https://code.visualstudio.com/download).
 
 ---
 
-##### 10.1 Open the CloudFormation template that you downloaded called - **deploymentScript.yaml**
+##### 7.1 Open the CloudFormation template that you downloaded called - **deploymentScript.yaml**
 
 ![C1NS1](/images/deploy_protec_10.png) 
 
 ---
 
-##### 10.2 In the code, search for <code> # -- END VTPS CLI</code>
+##### 7.2 In the code, search for <code> # -- END VTPS CLI</code>
 
 ![C1NS1](/images/deploy_protec_11.png) 
 
 ---
 
-##### 10.3 Add the code snippet provided **above** the line string  with **END VTPS CLI**. 
+##### 7.3 Add the code snippet provided **above** the line string  with **END VTPS CLI**. 
 
 These lines are to enable the event forwarding to AWS CloudWatch using the America EST timezone.
 
@@ -156,7 +124,7 @@ These lines are to enable the event forwarding to AWS CloudWatch using the Ameri
 ---
 
 
-##### 10.4  After making the changes, the code will be similar to the image below. 
+##### 7.4  After making the changes, the code will be similar to the image below. 
 The selection are the lines that I added. 
 
 - Once changed, **save the file**.
@@ -171,7 +139,7 @@ The selection are the lines that I added.
 
 ---
 
-#### 11. Navigate to the [AWS Console](https://aws.amazon.com/)
+#### 8. Navigate to the [AWS Console](https://aws.amazon.com/)
 - Navigate to **CloudFormation**
 - Click on **Create Stack with new resources**
 
@@ -179,7 +147,7 @@ The selection are the lines that I added.
 
 ---
 
-#### 12.  Create Stack
+#### 9.  Create Stack
 - Select the **Upload a template file** 
 - Click on **Choose file** 
 - Choose the CloudFormation template: **deploymentScript.yaml**
@@ -189,21 +157,21 @@ The selection are the lines that I added.
 
 ---
 
-#### 13.  Specify Stack details.
+#### 10.  Specify Stack details.
 - Stack Name: <code>Modernization-Workshop-Network-Security-Appliance</code>
 - Click on **Next**
 
 ![C1NS1](/images/deploy_protec_15.png) 
 
 ---
-#### 14. (Optional) Configure stack options
+#### 11. (Optional) Configure stack options
 - Add **Tags** if desired 
 - Click on **Next**
 
 ![C1NS1](/images/deploy_protec_16.png) 
 
 ---
-#### 15. Review deployment. 
+#### 12. Review deployment. 
 - Check the box "I acknowledge .."
 - Click on **Create stack**
 
@@ -213,7 +181,7 @@ The selection are the lines that I added.
 
 ---
 
-#### 16. Wait until the successful creation of the stack before you move to the next chapter.
+#### 13. Wait until the successful creation of the stack before you move to the next chapter.
 
 ![C1NS1](/images/deploy_protec_20.png) 
 
