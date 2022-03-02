@@ -118,7 +118,7 @@ You can use any text editor or IDE. In our example we are using [Visual Studio C
 
 ---
 
-##### 10.3 Add the code snippet provided **above** the line string  with **# -- END VTPS CLI**. 
+##### 10.3 Add the code snippet provided **above** the line string  with **END VTPS CLI**. 
 
 These lines are to enable the event forwarding to AWS CloudWatch using the America EST timezone.
 
