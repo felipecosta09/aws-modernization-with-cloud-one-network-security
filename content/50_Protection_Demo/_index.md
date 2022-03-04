@@ -27,7 +27,9 @@ pre: "<b>6. </b>"
 
 #### 2. Apply the following IPS filters.
 
-##### 2.1 Search for the filter: <code>5673: HTTP: SQL Injection (Boolean Identity)</code>
+##### 2.1 Search for the filter: <code>5673</code> 
+5673: HTTP: SQL Injection (Boolean Identity)
+
 - **Check the rule box** to assign
 - Click the **Settings Wheel** to configure rule
 - **Use customized actions**
@@ -40,7 +42,9 @@ pre: "<b>6. </b>"
 
 ---
 
-##### 2.2 Search for the filter: <code>3798: HTTP: SQL Injection (Boolean Identity)</code>
+##### 2.2 Search for the filter: <code>3798</code>
+3798: HTTP: SQL Injection (Boolean Identity)
+
 - **Check the rule box** to assign
 - Click the **Settings Wheel** to configure rule
 - **Use customized actions**
@@ -53,7 +57,9 @@ pre: "<b>6. </b>"
 
 ---
 
-##### 2.3 Search for the filter: <code>0361: HTTP: Protected File Access (/etc/passwd)</code>
+##### 2.3 Search for the filter: <code>0361</code>
+0361: HTTP: Protected File Access (/etc/passwd)
+
 - **Check the rule box** to assign
 - Click the **Settings Wheel** to configure rule
 - **Use customized actions**
@@ -66,7 +72,9 @@ pre: "<b>6. </b>"
 
 ---
 
-##### 2.4 Search for the filter: <code>6763: HTTP: Wget Web Page Retrieval Attempt</code>
+##### 2.4 Search for the filter: <code>6763</code>
+6763: HTTP: Wget Web Page Retrieval Attempt
+
 - **Check the rule box** to assign
 - Click the **Settings Wheel** to configure rule
 - **Use customized actions**
