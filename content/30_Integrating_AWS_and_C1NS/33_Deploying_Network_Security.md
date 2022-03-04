@@ -80,7 +80,7 @@ You can use any text editor or IDE. In our example we are using [Visual Studio C
 
 ---
 
-##### 7.2 In the code, search for <code> # -- END VTPS CLI</code>
+##### 7.2 In the code, search for <code>END VTPS CLI</code>
 
 ![C1NS1](/images/deploy_protec_11.png) 
 
