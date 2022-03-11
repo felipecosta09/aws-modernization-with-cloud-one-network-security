@@ -74,7 +74,7 @@ For any additional help please reach out to:
   <i class="fas fa-paper-plane"></i>
 </a>
 
-<a  href="https://github.com/aws-samples/aws-modernization-with-trend-micro/issues/new" target="_blank" rel="noopener noreferrer"  class="btn btn-default">  
+<a  href="https://github.com/aws-samples/aws-modernization-with-cloud-one-network-security/issues/new" target="_blank" rel="noopener noreferrer"  class="btn btn-default">  
   <i class="fas fa-bug"></i>
   Report an issue or feature request
 </a>
